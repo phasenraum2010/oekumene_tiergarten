@@ -96,13 +96,15 @@ dl.tx-kirche-info dt {
 dl.tx-kirche-info dd {
 }
 
-
-i.tx-kirche-icon-email.fa.fa-envelope,
-span.tx-kirche-icon-standort.map-icon.map-icon-postal-code,
-i.tx-kirche-icon-telefon.fa.fa-phone,
-i.tx-kirche-icon-kalender.fa.fa-calendar,
-i.tx-kirche-icon-webseite.fa.fa-sitemap {
+div.tx-kirche-icon-email,
+div.tx-kirche-icon-standort,
+div.tx-kirche-icon-telefon,
+div.tx-kirche-icon-kalender,
+div.tx-kirche-icon-webseite {
+	background-color: #7a43b6;
+	/*
 	float: left;
 	width: 30px;
+	*/
 }
 
