@@ -101,10 +101,16 @@ div.tx-kirche-icon-standort,
 div.tx-kirche-icon-telefon,
 div.tx-kirche-icon-kalender,
 div.tx-kirche-icon-webseite {
-	background-color: #7a43b6;
-	/*
+	/* background-color: #7a43b6; */
+}
+
+
+div.tx-kirche-icon-email i.fa.fa-envelope,
+div.tx-kirche-icon-standort span.map-icon.map-icon-postal-code,
+div.tx-kirche-icon-telefon i.fa.fa-phone,
+div.tx-kirche-icon-kalender i.fa.fa-calendar,
+div.tx-kirche-icon-webseite i.fa.fa-sitemap {
 	float: left;
 	width: 30px;
-	*/
 }
 
