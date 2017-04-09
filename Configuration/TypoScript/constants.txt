@@ -1,0 +1,233 @@
+### Not in Constant Editor ###
+
+# versions for cdn only
+bootstrap.version = 3.3.7
+jquery.version = 2.2.4
+fontawesome.version = 4.7.0
+mmenu.version = 5.7.8
+animate.version = 3.5.2
+
+#-------------------------------------------------------------------------------
+#	Plugin Constants
+#-------------------------------------------------------------------------------
+
+plugin {
+	tx_oekumene_tiergarten {
+		view {
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template root (FE)
+			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Templates/
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to templates for Content Elements (FE)
+			content.templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Templates/Content/
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template partials (FE)
+			partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Partials/
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template layouts (FE)
+			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Layouts/
+		}
+		settings {
+			# cat=plugin.tx_oekumene_tiergarten/kirche; type=int+; label=Page Id der Adressen der Gemeinden:
+			ttAdressPageId = 36
+		}
+	}
+	t3sbootstrap_configuration {
+		# versions for cdn only
+		bootstrap.version = 3.3.7
+		jquery.version = 2.2.4
+		fontawesome.version = 4.7.0
+		mmenu.version = 5.7.8
+		animate.version = 3.5.2
+		general {
+			company.name = Ökumene Tiergarten
+			pageTitle.suffix = Der Ökumenische Arbeitskreis Tiergarten
+			cdn = 1
+			tooltip_placement = top
+		}
+		pages {
+			homepage {
+				uid = 1
+			}
+			footer {
+				content {
+					pid = 1
+				}
+			}
+			sitemap {
+				uidList = 3
+			}
+		}
+		navigation {
+			navbar {
+				hover = 0
+				search {
+					enable = 1
+				}
+				excludeUidList = 4,3,18,17,24
+			}
+			navbar-right {
+				uidList = 4,3,18,17
+				label = <i class="fa fa-bars" aria-hidden="true"></i>
+			}
+			sidebar-subMenu {
+				enable = 0
+			}
+			footer {
+				uidList = 4,3,18,17
+				printButton {
+					enable = 1
+				}
+			}
+		}
+		extensions {
+			indexed_search {
+				page = 4
+			}
+			powermail {
+				formPid = 19
+			}
+			login {
+				enable = 1
+				uid = 26
+			}
+		}
+		styles {
+			jumbotron {
+				bgImg.enable = 1
+			}
+			navbar {
+				style.inverse = 1
+			}
+		}
+	}
+	tx_powermail {
+		settings {
+			main {
+				pid = 21
+				confirmation = 0
+				optin = 1
+				moresteps = 0
+			}
+			misc {
+				ajaxSubmit = 1
+				addQueryString = 1
+				randomizeFileName = 1
+			}
+			spamshield {
+				email = thomas@woehlke.org
+				logfileLocation = typo3temp/logs/powermail_spam.log
+				emailSubject = Spam in powermail form recognized at oekumene-tiergarten-test
+			}
+			sender {
+				attachment = 1
+			}
+		}
+	}
+	tx_cal_controller {
+		rights {
+			edit = 1
+			admin {
+				user = 1
+				group = 1
+			}
+			defaultSavePid = 28
+		}
+		pidList = 28
+		view {
+			location {
+				showMap = 1
+			}
+			dateFormat = %d.%m
+			timeFormat = %H:%M
+		}
+		rss {
+			eventViewPID = 25
+			xmlLang = de
+		}
+	}
+	tx_news {
+		settings {
+			sitemap {
+				startingpoint = 5
+				detailPid = 6
+				recursive = 4
+			}
+		}
+	}
+	metaseo {
+		metaTags {
+			description = Ein Gemeinschaftsprojekt evangelischer und katholischer Gemeinden in Berlin Tiergarten
+			copyright = %YEAR% Der Ökumenische Arbeitskreis Tiergarten und Evangeiische Kirchengemeinde Tiergarten
+			author = Thomas Wöhlke
+			publisher = Evangeiische Kirchengemeinde Tiergarten
+			revisit = 0
+			geoPositionLatitude = 52.5248355
+			geoPositionLongitude = 13.3470349
+			geoRegion = DE-BE
+			geoPlacename = Berlin
+			googleVerification = 4YcyuMUv5xbe1rdcBwsQdifaoDs4fJ6zem33iHVoC-I
+		}
+		services {
+			googleAnalytics = UA-96623703-1
+			googleAnalytics.anonymizeIp = 1
+			piwik {
+				url = http://piwik.natural-born-coder.de
+				id = 3
+			}
+		}
+	}
+	tx_felogin_pi1 {
+		_CSS_DEFAULT_STYLE >
+		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/felogin/FrontendLogin.html
+	}
+	feadmin.dmailsubscription {
+		file.templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
+		email = thomas@woehlke.org
+		emailName = Thomas Wöhlke
+		pid = 33
+		wrap1 = <div class="tw-font-size-2-black"> | </div>
+		wrap2 = <div class="tw-font-size-1-black"> | </div>
+		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
+	}
+}
+
+
+
+# see plugin.t3sbootstrap_configuration.styles
+styles {
+	content {
+		textmedia {
+			linkWrap {
+				lightboxEnabled = 1
+			}
+		}
+		loginform {
+			pid = 27
+			templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/felogin/FrontendLogin.html
+		}
+		allowTags = iframe, a, abbr, acronym, address, article, aside, b, bdo, big, blockquote, br, caption, center, cite, code, col, colgroup, dd, del, dfn, dl, div, dt, em, font, footer, header, h1, h2, h3, h4, h5, h6, hr, i, img, ins, kbd, label, li, link, meta, nav, ol, p, pre, q, samp, sdfield, section, small, span, strike, strong, style, sub, sup, table, thead, tbody, tfoot, td, th, tr, title, tt, u, ul, var
+	}
+	jumbotron {
+		hidden {
+			sm = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

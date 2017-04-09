@@ -1,0 +1,811 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<TITLE>Direct Mail subscription Template</TITLE>
+</head>
+<body>
+
+
+
+
+<br />
+<br />
+<br />
+<H1>DIRECT MAIL SUBSCRIPTION/ADMINISTRATION TEMPLATES</H1>
+<h2>EXAMPLE</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>	Form for creation of a new newsletter recipient:</em>
+<br />
+<br />
+
+
+
+<!-- ###TEMPLATE_CREATE### begin
+	Form for creation of a new newsletter recipient
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+<form name="tt_address_form" method="post" action="###FORM_URL###" class="form-horizontal">
+	<h1>###GW1B###Subscribe to our newsletter###GW1E###</h1>
+###GW2B###
+<div class="form-group">
+<label for="fe_ttaddress_gender_input" id="label-fe_ttaddress_gender" class="col-sm-2 control-label">Title*</label>
+	<div class="col-sm-10">
+		<select id="fe_ttaddress_gender_input" name="FE[tt_address][gender]" class="form-control"  aria-describedby="helpBlock-gender">
+			<option value="m">Mr.</option>
+			<option value="f">Mrs.</option>
+		</select>
+		<span id="helpBlock-gender" class="help-block">
+			<!--###SUB_REQUIRED_FIELD_gender### begin
+	This is shown only if the form is submitted and the field is configured to be "required" and at the same time not filled in.
+	The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+-->
+			<span class="label label-danger">You must fill in this field!</span>
+			<!--###SUB_REQUIRED_FIELD_gender### end -->
+		</span>
+	</div>
+</div>
+<div class="form-group">
+	<label for="fe_ttaddress_name_input" class="col-sm-2 control-label">Your name*</label>
+	<div class="col-sm-10">
+		<input type="text" name="FE[tt_address][name]" id="fe_ttaddress_name_input"  class="form-control" aria-describedby="helpBlock-name"/>
+		<span id="helpBlock-name" class="help-block">
+		<!--###SUB_REQUIRED_FIELD_name### begin
+	This is shown only if the form is submitted and the field is configured to be "required" and at the same time not filled in.
+	The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+-->
+		<span class="label label-danger">You must fill in this field!</span>
+		<!--###SUB_REQUIRED_FIELD_name### end -->
+		</span>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="fe_ttaddress_email_input" class="col-sm-2 control-label">Email*</label>
+	<div class="col-sm-10">
+		<input type="email" name="FE[tt_address][email]" id="fe_ttaddress_email_input" class="form-control" aria-describedby="helpBlock-email"/>
+		<span id="helpBlock-email" class="help-block">
+		<!--###SUB_REQUIRED_FIELD_email### begin
+	Same as above...
+	EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
+-->
+			<span class="label label-danger">You must fill in this field!</span>
+			###EVAL_ERROR_FIELD_email###
+		<!--###SUB_REQUIRED_FIELD_email### end-->
+		</span>
+	</div>
+</div>
+
+###CE_CATLIST###
+
+<div class="form-group">
+	<label for="fe_ttaddress_html_input" class="col-sm-2 control-label">HTML emails?</label>
+	<div class="col-sm-10">
+		<input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value=1 id="fe_ttaddress_html_input" />
+	</div>
+</div>
+###CAPTCHA###
+<div class="form-group">
+	<div class="col-sm-offset-2 col-sm-10">
+		<input type="submit" name="whatever" class="btn btn-primary" value="Subscribe" />
+		<input type="submit" name="whatever" class="btn btn-primary" value="Cancel" onClick="document.forms[0].action='###BACK_URL###';" />
+	</div>
+</div>
+###HIDDENFIELDS###
+</form>
+<br/>
+<p>
+If you are subscribed already and want to <a href="###FORM_URL###&cmd=infomail&backURL=###FORM_URL_ENC###">unsubscribe or edit your profile, click here.</a>
+</p> ###GW2E###
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_CREATE### end-->
+
+
+
+
+<!-- ###TEMPLATE_CAPTCHA### begin -->
+<div class="form-group">
+	<label for="tw-kirche-captcha" class="col-sm-2 control-label">
+###CAPTCHA_IMG###
+	</label>
+	<div class="col-sm-10">
+		<input type="text" size=30 name="FE[tt_address][captcha]" id="tw-kirche-captcha" value=""  aria-describedby="helpBlock-captcha"/>
+		<span id="helpBlock-captcha" class="help-block">
+
+<!--###SUB_REQUIRED_FIELD_captcha### begin
+	Same as above...
+	EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
+-->		<span class="label label-danger">You must fill in this field!</span>
+	###EVAL_ERROR_FIELD_captcha###
+<!--###SUB_REQUIRED_FIELD_captcha### end-->
+		</span>
+	</div>
+</div>
+<!-- ###TEMPLATE_CAPTCHA### end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>	This is the code shown when a new newsletter recipient is created:</em>
+<br />
+<br />
+
+
+<!-- ###TEMPLATE_CREATE_SAVED### begin
+	This is the code shown when a new newsletter recipient is created.
+
+	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###Subscription recieved.###GW1E###</h1>
+			<p>
+###GW2B###
+				You're now subscribed to our newsletter. An email has been sent to your email address, <strong>###FIELD_email###</strong>, with a link to the administration of your profile.<br />Please notice that your subscription is not active until you've clicked a link in that email!
+###GW2E###
+			</p>
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_CREATE_SAVED### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>	This is the form used to edit the existing users.</em>
+<br />
+<br />
+
+
+<!-- ###TEMPLATE_EDIT### begin
+	This is the form used to edit the existing users.
+
+	The form works with non-logged in users based on email-verification
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+<form name="tt_address_form" method="post" action="###FORM_URL###" class="form-horizontal">
+	<h1>###GW1B###Edit profile###GW1E###</h1>
+###GW2B###
+
+
+<!-- ###SUB_REQUIRED_FIELDS_WARNING### begin
+	This is a general warning about incorrectly filled in fields.
+-->
+	<div><span class="label label-danger"><strong>Some of the required fields are not correctly filled in! Please do that!</strong></span></div>
+<!-- ###SUB_REQUIRED_FIELDS_WARNING### end -->
+	<div class="form-group">
+		<label for="fe_ttaddress_gender_input2" id="label-fe_ttaddress_gender2" class="col-sm-2 control-label">Title*</label>
+		<div class="col-sm-10">
+			<select id="fe_ttaddress_gender_input2" name="FE[tt_address][gender]" class="form-control" aria-describedby="helpBlock-gender2">
+				<option value="m">Mr.</option>
+				<option value="f">Mrs.</option>
+			</select>
+			<span id="helpBlock-gender2" class="help-block">
+		<!--###SUB_REQUIRED_FIELD_gender### begin
+	This is shown only if the form is submitted and the field is configured to be "required" and at the same time not filled in.
+	The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+-->
+			<span class="label label-danger"><strong>You must fill in this field!</strong></span>
+		<!--###SUB_REQUIRED_FIELD_gender### end -->
+			</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="fe_ttaddress_name_input2" id="label-fe_ttaddress_name" class="col-sm-2 control-label">Your name*</label>
+		<div class="col-sm-10">
+			<input id="fe_ttaddress_name_input2" type="text" name="FE[tt_address][name]"  class="form-control" aria-describedby="helpBlock-name2"/>
+			<span id="helpBlock-name2" class="help-block">
+			<!--###SUB_REQUIRED_FIELD_name### begin
+	This is shown only if the form is submitted and the field is configured to be "required" and at the same time not filled in.
+	The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+-->
+				<span class="label label-danger"><strong>You must fill in this field!</strong></span>
+			<!--###SUB_REQUIRED_FIELD_name### end -->
+			</span>
+		</div>
+	</div>
+		<div class="form-group">
+			<label for="fe_ttaddress_email_input2" id="label-fe_ttaddress_email" class="col-sm-2 control-label">Email*</label>
+			<div class="col-sm-10">
+				<input id="fe_ttaddress_email_input2" type="email" name="FE[tt_address][email]" class="form-control" aria-describedby="helpBlock-email2">
+				<span id="helpBlock-email2" class="help-block">
+<!--###SUB_REQUIRED_FIELD_email### begin
+	Same as above...
+	EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
+-->
+					<span class="label label-danger"><strong>You must fill in this field!</strong></span>
+	###EVAL_ERROR_FIELD_email###
+<!--###SUB_REQUIRED_FIELD_email### end-->
+				</span>
+			</div>
+		</div>
+
+###CE_CATLIST###
+
+	<div class="form-group">
+		<label for="fe_ttaddress_html_input2" id="label-fe_ttaddress_html" class="col-sm-2 control-label">HTML emails?</label>
+		<div class="col-sm-10">
+			<input id="fe_ttaddress_html_input2" type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" class="form-control"/>
+		</div>
+	</div>
+
+###CAPTCHA###
+
+	###HIDDENFIELDS###
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<input type="Submit" name="whatever" value="Update" class="btn btn-primary">
+		</div>
+	</div>
+</form>
+<br />
+<p>
+Click here to <a href="###FORM_URL###&rU=###REC_UID###&aC=###AUTH_CODE###&cmd=delete"><strong>delete (!)</strong></a> your registration!
+###GW2E###
+</p>
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_EDIT### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>	This is displayed when a user has updated his profile:</em>
+<br />
+<br />
+
+
+<!-- ###TEMPLATE_EDIT_SAVED### begin
+	This is displayed when a user has updated his profile:
+
+	You can use the newly updated record as markers on the format ###FIELD_[fieldname]###
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###Profile changed###GW1E###</h1>
+<br />
+<p>
+###GW2B###
+
+You've updated your profile. <br />
+
+<a href="###FORM_URL###&cmd=edit&rU=###FIELD_uid###&aC=###AUTH_CODE###">Go back to edit.</a>
+###GW2E###
+</p>
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_EDIT_SAVED### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>		This form is used to send the infomails.</em>
+<br />
+<br />
+
+
+
+<!-- ###TEMPLATE_INFOMAIL### begin
+	This form is used to send the infomails.
+	You could also use this as a "did you forget your password?" service form.
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###Do you wish to edit your profile?###GW1E###</h1>
+
+###GW2B###
+<p>
+Enter the email address <em>by which you're registered</em> here, and a link to the administration will be sent to your account:
+</p>
+
+<form name="tt_address_form" method="post" action="###FORM_URL###" class="form-horizontal">
+	<div class="form-group">
+		<label for="fe_ttaddress_email_input3" id="label-fe_ttaddress_email3" class="col-sm-2 control-label">Email:</label>
+		<div class="col-sm-10">
+			<input id="fe_ttaddress_email_input3" type="email" name="fetch" class="form-control" aria-describedby="helpBlock-email2">
+		</div>
+	</div>
+###CAPTCHA###
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<input type="submit" name="whatever" value="Send" class="btn btn-primary"/>
+		</div>
+	</div>
+	###HIDDENFIELDS###
+</form>
+###GW2E###
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_INFOMAIL### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>		This template is the response page when a users has requested his password send to his email.</em>
+<br />
+<br />
+
+<!-- ###TEMPLATE_INFOMAIL_SENT### begin
+	This template is the response page when a users has requested his password send to his email.
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###An email has been sent to your account with the required information###GW1E###</h1>
+<br />
+###GW2B###
+<p><a href="###BACK_URL###"><strong>Go back...</strong></a></p>
+###GW2E###
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_INFOMAIL_SENT### end-->
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>		This template is the response page when no email is found.</em>
+<br />
+<br />
+
+<!-- ###TEMPLATE_INFOMAIL_NORECORD### begin
+	This template is the response page when no email is found.
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###The email is not registered.###GW1E###</h1>
+<br />
+###GW2B###
+
+<p><a href="###BACK_URL###"><strong>Go back to register.</strong></a></p>
+###GW2E###
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_INFOMAIL_NORECORD### end-->
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>		This template is the response page when a users has delete his subscription.</em>
+<br />
+<br />
+
+<!-- ###TEMPLATE_DELETE_SAVED### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###You're now unsubscribed!###GW1E###</h1>
+<br />
+###GW2B###
+
+
+###GW2E###
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_DELETE_SAVED### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<h2>'Setfixed' templates:</h2>
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>This template is the response page when a users has clicked a setfixed link.</em>
+<br />
+<br />
+<!-- ###TEMPLATE_SETFIXED_OK### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###Your subscription was approved###GW1E###</h1>
+<br />
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_SETFIXED_OK### end-->
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>This template is the response page when a users has clicked a setfixed link.</em>
+<br />
+<br />
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###Your subscription was DELETED!###GW1E###</h1>
+<br />
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### end-->
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>This template is the response page when a users has clicked a setfixed link.</em>
+<br />
+<br />
+<!-- ###TEMPLATE_SETFIXED_FAILED### begin
+	This is the message displayed if you have just deleted your subscription
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>##GW1B###Sorry, setting subscription options failed!###GW1E###</h1>
+<br />
+###GW2B###
+			<p>May happen if you click the setfixed link a second time (if the record has changed since the setfixed link was generated this error will happen!)</p>
+###GW2E###
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_SETFIXED_FAILED### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>	Authentication failed message.</em>
+<br />
+<br />
+
+<!-- ###TEMPLATE_AUTH### begin
+	Authentication failed message
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>###GW1B###Authentication failed!###GW1E###</h1>
+<br />
+###GW2B###
+			<p>For some reason the authentication failed.</p>
+###GW2E###
+		</div>
+	</div>
+</div>
+<!-- ###TEMPLATE_AUTH### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<H1>EMAIL TEMPLATES:</H1>
+In these plain text email templates the first line with content is used as subject in the mails.<br />
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>This template is used to notify a person by email that he is subscribed to the newsletter.<br />
+You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+</em>
+<br />
+<br />
+
+
+<pre>
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### begin
+	This template is used to notify a person by email that he is subscribed to the newsletter.
+	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+-->
+<!--###SUB_RECORD###-->
+TYPO3 Direct Mailer
+
+Dear ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
+
+You're now subscribed to a TYPO3 Testsite newsletter.
+
+IMPORTANT:
+
+Before your subscriptions is fully enabled, you must click this link:
+###THIS_URL######FORM_URL###1=1###SYS_SETFIXED_approve###
+
+If you cannot accept the subscription (eg. if somebody else subscribed you!) just click this link and you're deleted from the database:
+###THIS_URL######FORM_URL###1=1###SYS_SETFIXED_DELETE###
+
+If you wish to edit your personal data, click this link:
+###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### end-->
+</pre>
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>This template is used to notify a person by email that he has confirmed the subscription.<br />
+You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+</em>
+<br />
+<br />
+
+
+<pre>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_approve### begin
+	This template is used to notify a person by email that he has confirmed his subscription
+	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+-->
+<!--###SUB_RECORD###-->
+TYPO3 Direct Mailer
+
+Dear ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
+
+You have successfully confirmed your subscription.
+
+If you wish to edit your personal data, click this link:
+###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_approve### end-->
+</pre>
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>This is the template used for the administrator notifycation email upon a new subscription.<br />
+You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+</em>
+<br />
+<br />
+
+
+<pre>
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### begin
+ 	This is the template used for the administrator notifycation email upon a new subscription.
+	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+-->
+<!--###SUB_RECORD###-->
+Admin: New subscription
+
+Name: ###FIELD_name###
+Email: ###FIELD_email###
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### end-->
+</pre>
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>The template for forgotten passwords (infomail 'FORGOTPASSWORD' template!)</em>
+<br />
+<br />
+<pre>
+<!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### begin
+	The template for forgotten passwords (infomail 'FORGOTPASSWORD' template!)
+-->
+<!--###SUB_RECORD###-->
+TYPO3 Testsite Newsletter, Admin link
+
+Dear ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
+
+Click here to edit your personal data
+###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+Click here to DELETE (!) your subscription
+###THIS_URL######FORM_URL###&cmd=delete&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### end-->
+</pre>
+
+
+
+
+
+<br /><br /><br /><br /><HR><br /><br /><br />
+<em>Template used if the infomail was empty!</em>
+<br />
+<br />
+<pre>
+<!-- ###EMAIL_TEMPLATE_NORECORD### begin
+	Template used if the infomail was empty!
+-->
+Record not found.
+
+You have requested information about a subscription, but nothing was found.
+
+Sorry.
+
+<!-- ###EMAIL_TEMPLATE_NORECORD### end-->
+</pre>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

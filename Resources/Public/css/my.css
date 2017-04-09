@@ -1,0 +1,108 @@
+/* my own CSS. (C) 2017 Der Oekumenische Arbeitskreis Tiergarten */
+
+body {
+	font-family: 'Titillium Web', sans-serif !important;
+	font-weight: 100 !important;
+	font-size: 18px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Titillium Web', sans-serif !important;
+	font-weight: 100 !important;
+}
+
+iframe, object, embed {
+	width: 100%;
+	border-radius: 4px;
+}
+
+#gmap iframe, #gmap object, #gmap embed {
+	width: 100%;
+	border-radius: 4px;
+}
+
+.tx-wecmap-map {
+	position: relative;
+	padding-bottom: 66.66%; /* ratio 16x9: 56.25% */
+	overflow: hidden;
+	width: 100% !important;
+	height: auto !important;
+	border-radius: 4px;
+}
+
+.tx-wecmap-map iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	border-radius: 4px;
+}
+/* ratio 4x3 */
+.tx-wecmap-map.ratio4x3 {
+	padding-bottom: 75%;
+}
+
+.tx-kirche-street-address {
+	white-space: normal;
+	display: inline;
+	font-size: x-large;
+	font-weight: normal;
+	line-height: 1;
+	color: #999999;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 14px;
+}
+
+#jumbotron-header h1 span.header-h1,
+#jumbotron-header h1 small {
+	color: rgb(85, 85, 85);
+ 	background-color: rgba(255,255,255,0.7);
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 4px;
+}
+
+h1.textmedia-header span.header-h1 {
+	color: rgb(85, 85, 85);
+}
+
+img {
+	border-radius: 4px;
+}
+
+.tx-kirche-text-content {
+	margin-top: 15px;
+}
+
+.tw-font-size-2-black {
+
+}
+
+.tw-font-size-1-black {
+
+}
+
+h3.tx-kirche-info {
+	margin-top: 0px;
+}
+
+dl.tx-kirche-info dt {
+	float: left;
+	width: 30px;
+}
+
+dl.tx-kirche-info dd {
+}
+
+
+i.tx-kirche-icon-email.fa.fa-envelope,
+span.tx-kirche-icon-standort.map-icon.map-icon-postal-code,
+i.tx-kirche-icon-telefon.fa.fa-phone,
+i.tx-kirche-icon-kalender.fa.fa-calendar,
+i.tx-kirche-icon-webseite.fa.fa-sitemap {
+	float: left;
+	width: 30px;
+}
+

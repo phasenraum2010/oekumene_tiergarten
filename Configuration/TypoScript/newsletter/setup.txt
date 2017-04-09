@@ -1,0 +1,49 @@
+config {
+	disableAllHeaderCode = 0
+	disableAllHeaderCode = 0
+	absRefPrefix = http://oekumene-tiergarten-test.natural-born-coder.de/
+	baseURL = http://oekumene-tiergarten-test.natural-born-coder.de/
+	compressCss = 0
+	compressJs = 0
+	concatenateCss = 0
+	concatenateJs = 0
+	prefixLocalAnchors = all
+	absRelPath = /
+	tx_realurl_enable = 1
+}
+page {
+	stylesheet >
+	headerData.10 >
+	headerData.10 = FILE
+	headerData.10 {
+		file = {$stylesheet}
+		wrap = <!-- | -->
+	}
+}
+plugin {
+	#tx_cssstyledcontent._CSS_DEFAULT_STYLE >
+	tx_ttaddress_pi1 >
+	feadmin.dmailsubscription {
+		pid = {$plugin.feadmin.dmailsubscription.pid}
+		templateFile ={$plugin.feadmin.dmailsubscription.file.templateFile}
+		cObjects {
+			CATLIST {
+				templateFile = {$plugin.feadmin.dmailsubscription.file.templateFile}
+				pid = {$plugin.feadmin.dmailsubscription.pid}
+			}
+		}
+
+		# Global wraps
+		wrap1.wrap = {$plugin.feadmin.dmailsubscription.wrap1}
+		wrap2.wrap = {$plugin.feadmin.dmailsubscription.wrap2}
+		color1.wrap = {$plugin.feadmin.dmailsubscription.color1}
+		color2.wrap = {$plugin.feadmin.dmailsubscription.color2}
+		color3.wrap = {$plugin.feadmin.dmailsubscription.color3}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,164 @@
+#-------------------------------------------------------------------------------
+#	Plugin Setup
+#-------------------------------------------------------------------------------
+
+config {
+	prefixLocalAnchors = all
+	absRelPath = /
+	tx_realurl_enable = 1
+	index_enable = 1
+	index_externals = 1
+	spamProtectEmailAddresses = 2
+	spamProtectEmailAddresses_atSubst = (at)
+}
+
+plugin {
+	tx_felogin_pi1 {
+		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/felogin/FrontendLogin.html
+		email_from = thomas@woehlke.org
+		email_fromName = Thomas Wöhlke
+		replyTo = thomas@woehlke.org
+		_CSS_DEFAULT_STYLE >
+	}
+	tx_indexedsearch {
+		_CSS_DEFAULT_STYLE >
+		templateFile = EXT:t3sbootstrap/Resources/Private/Extensions/indexed_search/indexed_search.html
+	}
+	tx_powermail {
+		view {
+			templateRootPaths {
+				300 = EXT:oekumene_tiergarten/Resources/Private/Extensions/powermail/Templates/
+			}
+			partialRootPaths {
+				300 = EXT:oekumene_tiergarten/Resources/Private/Extensions/powermail/Partials/
+			}
+			layoutRootPaths {
+				300 = EXT:oekumene_tiergarten/Resources/Private/Extensions/powermail/Layouts/
+			}
+		}
+	}
+	tx_news {
+		settings.list.media.dummyImage = typo3conf/ext/oekumene_tiergarten/Resources/Public/Images/logo_oekumene.jpg
+	}
+	feadmin.dmailsubscription {
+		templateFile ={$plugin.feadmin.dmailsubscription.file.templateFile}
+		cObjects {
+			CATLIST {
+				templateFile = {$plugin.feadmin.dmailsubscription.file.templateFile}
+				pid = {$plugin.feadmin.dmailsubscription.pid}
+			}
+		}
+
+		# Global wraps
+		wrap1.wrap = {$plugin.feadmin.dmailsubscription.wrap1}
+		wrap2.wrap = {$plugin.feadmin.dmailsubscription.wrap2}
+		color1.wrap = {$plugin.feadmin.dmailsubscription.color1}
+		color2.wrap = {$plugin.feadmin.dmailsubscription.color2}
+		color3.wrap = {$plugin.feadmin.dmailsubscription.color3}
+	}
+	tx_oekumene_tiergarten {
+		settings {
+			ttAdressPageId = {$plugin.tx_oekumene_tiergarten.settings.ttAdressPageId}
+		}
+	}
+}
+
+page {
+	includeCSS {
+		file1 = https://fonts.googleapis.com/css?family=Titillium+Web
+		file2 = EXT:oekumene_tiergarten/Resources/Public/Contrib/map-icons/css/map-icons.min.css
+		file3 = EXT:oekumene_tiergarten/Resources/Public/css/my.css
+	}
+	includeJS {
+		file1 = EXT:oekumene_tiergarten/Resources/Public/Contrib/map-icons/js/map-icons.min.js
+		file2 = EXT:oekumene_tiergarten/Resources/Public/js/my.js
+	}
+	config {
+		index_enable = 1
+		# Wenn gesetzt, werden externe Medien, auf die auf Seiten verlinkt wird, ebenfalls indiziert.
+		index_externals = 1
+	}
+	10 {
+		templateRootPaths {
+			310 = {$plugin.tx_oekumene_tiergarten.view.templateRootPath}
+			305 = EXT:oekumene_tiergarten/Resources/Private/Templates/
+		}
+		partialRootPaths {
+			310 = {$plugin.tx_oekumene_tiergarten.view.partialRootPath}
+			300 = EXT:oekumene_tiergarten/Resources/Private/Partials/
+		}
+		layoutRootPaths {
+			310 = {$plugin.tx_oekumene_tiergarten.view.layoutRootPath}
+			300 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
+		}
+	}
+}
+
+lib {
+	parseFunc_RTE {
+		allowTags := addToList(object,param,embed,iframe)
+	}
+	fluidContent {
+		templateRootPaths {
+			310 = {$plugin.tx_oekumene_tiergarten.view.content.templateRootPath}
+			300 = EXT:oekumene_tiergarten/Resources/Private/Templates/Content/
+		}
+		partialRootPaths {
+			310 = {$plugin.tx_oekumene_tiergarten.view.partialRootPath}
+			300 = EXT:oekumene_tiergarten/Resources/Private/Partials/
+		}
+		layoutRootPaths {
+			310 = {$plugin.tx_oekumene_tiergarten.view.content.layoutRootPath}
+			300 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
+		}
+	}
+}
+
+
+tt_content {
+	kirche < lib.fluidContent
+	kirche {
+		templateName = Kirche
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = assets
+			}
+			20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
+			20 {
+				maxGalleryWidth = {$styles.content.textmedia.maxW}
+				maxGalleryWidthInText = {$styles.content.textmedia.maxWInText}
+				columnSpacing = {$styles.content.textmedia.columnSpacing}
+				borderWidth = {$styles.content.textmedia.borderWidth}
+				borderPadding = {$styles.content.textmedia.borderPadding}
+			}
+			30 = ThomasWoehlke\OekumeneTiergarten\DataProcessing\ChurchProcessor
+		}
+		stdWrap {
+			# Setup the edit icon for content element "textmedia"
+			editIcons = tt_content: header [header_layout], bodytext, assets [imageorient|imagewidth|imageheight], [imagecols|imageborder], image_zoom
+			editIcons {
+				iconTitle.data = LLL:EXT:fluid_styled_content/Resources/Private/Language/FrontendEditing.xlf:editIcon.textmedia
+			}
+		}
+	}
+}
+
+plugin.tx_felogin_pi1.templateFile = EXT:oekumene_tiergarten/Resources/Private/Templates/FrontendLogin.html
+plugin.tx_felogin_pi1.email_from = thomas@woehlke.org
+plugin.tx_felogin_pi1.email_fromName = Thomas Wöhlke
+plugin.tx_felogin_pi1.replyTo = thomas@woehlke.org
+plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
+
+
+
+# **********************************************************
+# Library for indexed_search
+# **********************************************************
+
+
+
+
+
+
+

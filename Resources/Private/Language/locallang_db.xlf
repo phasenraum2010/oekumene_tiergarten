@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-01-05T16:59:16Z" product-name="oekumene_tiergarten">
+		<header/>
+		<body>
+
+			<trans-unit id="wizard.title">
+				<source>Kirche</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_oekumene_tiergarten_glyphicon">
+				<source>Glyphicon</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_oekumene_tiergarten_no_glyphicon">
+				<source>Kein Glyphicon</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_oekumene_tiergarten_fontawesome_icon">
+				<source>Font Awesome Icon</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_oekumene_tiergarten_linkToTop">
+				<source>Link top Top</source>
+			</trans-unit>
+
+			<trans-unit id="palette.bodytext">
+				<source>Text</source>
+			</trans-unit>
+
+			<trans-unit id="bodytext_formlabel">
+				<source>Text</source>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_street_address_formlabel">
+				<source>Street Address</source>
+			</trans-unit>
+
+			<trans-unit id="palette.tx_kirche_street_address">
+				<source>Street Address</source>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_address_street_formlabel">
+				<source>Straße</source>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_address_city_formlabel">
+				<source>Stadt</source>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_address_zip_formlabel">
+				<source>PLZ</source>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_address_state">
+				<source>Bundesland</source>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_address_country_formlabel">
+				<source>Land</source>
+			</trans-unit>
+
+			<trans-unit id="palette.kircheaddress">
+				<source>Address</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

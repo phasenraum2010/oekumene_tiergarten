@@ -1,0 +1,11 @@
+config {
+	baseURL = http://oekumene-tiergarten-test.natural-born-coder.de/
+	compressCss = 0
+	compressJs = 0
+	concatenateCss = 0
+	concatenateJs = 0
+}
+
+
+
+

@@ -1,0 +1,14 @@
+plugin {
+	feadmin.dmailsubscription {
+		file.templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
+		email = thomas@woehlke.org
+		emailName = Thomas Wöhlke
+		pid = 33
+		wrap1 = <div class="tw-font-size-2-black"> | </div>
+		wrap2 = <div class="tw-font-size-1-black"> | </div>
+		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
+	}
+	tx_directmail_pi1 {
+		siteUrl = http://oekumene-tiergarten-test.natural-born-coder.de
+	}
+}

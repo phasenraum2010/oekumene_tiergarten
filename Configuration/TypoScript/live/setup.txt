@@ -1,0 +1,11 @@
+config {
+	baseURL = http://oekumene-tiergarten.de/
+	compressCss = 1
+	compressJs = 1
+	concatenateCss = 1
+	concatenateJs = 1
+}
+
+
+
+

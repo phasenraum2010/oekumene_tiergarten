@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-01-05T16:59:16Z" product-name="oekumene_tiergarten">
+		<header/>
+		<body>
+
+			<trans-unit id="oekumene_tiergarten_kirche.wizard.title">
+				<target>Kirche</target>
+			</trans-unit>
+
+			<trans-unit id="oekumene_tiergarten_kirche.wizard.description">
+				<target>Standort in einer Kirchengemeinde</target>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_street_address.config">
+				<target>Konfiguration Adresse</target>
+			</trans-unit>
+
+			<trans-unit id="bodytext.config">
+				<target>Konfiguration Text</target>
+			</trans-unit>
+
+			<trans-unit id="tx_kirche_address_street.config">
+				<target>Staße</target>
+			</trans-unit>
+			<trans-unit id="tx_kirche_address_city.config">
+				<target>Stadt</target>
+			</trans-unit>
+			<trans-unit id="tx_kirche_address_zip.config">
+				<target>PLZ</target>
+			</trans-unit>
+			<trans-unit id="tx_kirche_address_state.config">
+				<target>Bundesland</target>
+			</trans-unit>
+			<trans-unit id="tx_kirche_address_country.config">
+				<target>Land</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
