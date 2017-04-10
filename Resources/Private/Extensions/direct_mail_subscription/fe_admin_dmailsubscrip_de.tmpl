@@ -22,37 +22,37 @@
 <em>Form zum Anlegen eines neuen Newsletterabonnementen:</em>
 <!-- ###TEMPLATE_CREATE### begin -->
 <form name="tt_address_form" method="post" action="###FORM_URL###">
-	###GW1B###Anmeldung für Stefans TYPO3 Newsletter###GW1E###
-	###GW2B###
-	<label>Ihr Name:</label>
-	<!--###SUB_REQUIRED_FIELD_name### begin
-		Das hier wird nur dann angezeigt, wenn das Formular abgeschickt wurde und das Feld als zwingend benötigt konfiguriert wurde.
-		The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
-	-->
+###GW1B###Anmeldung für Stefans TYPO3 Newsletter###GW1E###
+###GW2B###
+<label>Ihr Name:</label>
+<!--###SUB_REQUIRED_FIELD_name### begin
+	Das hier wird nur dann angezeigt, wenn das Formular abgeschickt wurde und das Feld als zwingend benötigt konfiguriert wurde.
+	The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+-->
 	<font color="red"><strong>Du musst einen Namen angeben!</strong></font><br />
-	<!--###SUB_REQUIRED_FIELD_name### end -->
-	<input type="text" name="FE[tt_address][name]" /><br />
-	<label for="email">E-Mail:</label>
-	<!--###SUB_REQUIRED_FIELD_email### begin
-		Dasselbe wie oben...
-		EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
-	-->
+<!--###SUB_REQUIRED_FIELD_name### end -->
+<input type="text" name="FE[tt_address][name]" /><br />
+<label for="email">E-Mail:</label>
+<!--###SUB_REQUIRED_FIELD_email### begin
+	Dasselbe wie oben...
+	EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
+-->
 	<font color="red"><strong>Du musst eine E-Mail-Adresse angeben!</strong></font><br />
 	###EVAL_ERROR_FIELD_email###<br />
-	<!--###SUB_REQUIRED_FIELD_email### end-->
-	<input type="text" name="FE[tt_address][email]" /><br />
-	<div>###CE_CATLIST###</div>
-	<label>HTML E-Mails?</label>
-	<input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" />
-	<br />
-	<br />
-	<input type="submit" name="whatever" value="Anmelden" />
-	<input type="submit" name="whatever" value="Abbrechen" onclick="document.forms[0].action='###BACK_URL###';" />
-	###HIDDENFIELDS###
+<!--###SUB_REQUIRED_FIELD_email### end-->
+<input type="text" name="FE[tt_address][email]" /><br />
+<div>###CE_CATLIST###</div>
+<label>HTML E-Mails?</label>
+<input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" />
+<br />
+<br />
+<input type="submit" name="whatever" value="Anmelden" />
+<input type="submit" name="whatever" value="Abbrechen" onclick="document.forms[0].action='###BACK_URL###';" />
+###HIDDENFIELDS###
 </form>
 <br />
 Wenn Du bereits angemeldet bist und nun wünscht Dich <a href="###FORM_URL###&cmd=infomail&backURL=###FORM_URL_ENC###">abzumelden oder Dein Profil zu bearbeiten, dann klick bitte hier.</a>
-###GW2E###
+ ###GW2E###
 <!-- ###TEMPLATE_CREATE### end-->
 
 
@@ -91,34 +91,34 @@ Du bist nun für unseren Newsletter angemeldet. Dir wurde soeben eine Nachricht 
 	The form works with non-logged in users based on email-verification
 -->
 <form name="tt_address_form" method="post" action="###FORM_URL###">
-	###GW1B###Profil bearbeiten###GW1E###
-	###GW2B###
-	<!-- ###SUB_REQUIRED_FIELDS_WARNING### begin
-		Dies ist eine generelle Warnung bzgl. falsch gefüllten Feldern.
-	-->
-	<b>Einige der benötigten Felder wurden nicht korrekt ausgefüllt. Du hast jetzt noch die Möglichkeit, das zu ändern.</b><br />
-	<br />
-	<!-- ###SUB_REQUIRED_FIELDS_WARNING### end -->
+###GW1B###Profil bearbeiten###GW1E###
+###GW2B###
+<!-- ###SUB_REQUIRED_FIELDS_WARNING### begin
+	Dies ist eine generelle Warnung bzgl. falsch gefüllten Feldern.
+-->
+<b>Einige der benötigten Felder wurden nicht korrekt ausgefüllt. Du hast jetzt noch die Möglichkeit, das zu ändern.</b><br />
+<br />
+<!-- ###SUB_REQUIRED_FIELDS_WARNING### end -->
 
-	<label>Ihr Name:</label>
-	<!--###SUB_REQUIRED_FIELD_name### begin
-		Das hier wird nur dann angezeigt, wenn das Formular abgeschickt wurde und das Feld als zwingend benötigt konfiguriert wurde.
-		The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
-	-->
+<label>Ihr Name:</label>
+<!--###SUB_REQUIRED_FIELD_name### begin
+	Das hier wird nur dann angezeigt, wenn das Formular abgeschickt wurde und das Feld als zwingend benötigt konfiguriert wurde.
+	The syntax is of the comment 'name' is: 	SUB_REQUIRED_FIELD_[enter-the-field-name-here]
+-->
 	<font color="red"><strong>Du musst dieses Feld ausfüllen!</strong></font><br />
-	<!--###SUB_REQUIRED_FIELD_name### end -->
-	<input type="text" name="FE[tt_address][name]" /><br />
-	<label>E-Mail:</label>
-	<!--###SUB_REQUIRED_FIELD_email### begin
-		Dasselbe wie oben...
-		EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
-	-->
+<!--###SUB_REQUIRED_FIELD_name### end -->
+<input type="text" name="FE[tt_address][name]" /><br />
+<label>E-Mail:</label>
+<!--###SUB_REQUIRED_FIELD_email### begin
+	Dasselbe wie oben...
+	EVAL_ERROR_FIELD_email is in addition an error message defined in TypoScript in case an email address does not verify to be of correct syntax.
+-->
 	<font color="red"><strong>Trag bitte eine gültige E-Mail-Adresse ein!</strong></font><br />
 	###EVAL_ERROR_FIELD_email###<br />
-	<!--###SUB_REQUIRED_FIELD_email### end-->
-	<input type="text" name="FE[tt_address][email]" /><br />
-	<label>HTML E-Mails?</label>
-	<input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" /><br />
+<!--###SUB_REQUIRED_FIELD_email### end-->
+<input type="text" name="FE[tt_address][email]" /><br />
+<label>HTML E-Mails?</label>
+<input type="checkbox" name="FE[tt_address][module_sys_dmail_html]" value="1" /><br />
 	###HIDDENFIELDS###
 	<input type="Submit" name="whatever" value="Aktualisieren" />
 </form>
@@ -173,8 +173,8 @@ E-Mail: ###FIELD_email###<br />
 ###GW2B###
 Trag hier die E-Mail-Adresse ein, <em>mit der Du Dich hier registriert hast</em>, und ein Link zum Bearbeiten wird an Deine E-Mail-Adresse gesendet:<br />
 <form name="tt_address_form" method="post" action="###FORM_URL###">
-	<input type="text" name="fetch" /><br /><br />
-	<input type="submit" name="whatever" value="Senden" />
+<input type="text" name="fetch" /><br /><br />
+<input type="submit" name="whatever" value="Senden" />
 	###HIDDENFIELDS###
 </form>
 ###GW2E###
@@ -312,14 +312,14 @@ Das kann vorkommen, wenn der Löschenlink in Ihrer Infomail ein weiteres Mal ang
 In diesen Text-Mail-Vorlagen werden die ersten Zeilen f&uuml;r den Betreff der Mail verwendet.<br />
 
 <em>Diese Vorlage wird benötigt, um einen Benutzer darüber zu informieren, das er für den Newsletter registriert wurde.<br />
-	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 </em>
 <pre>
 <!-- ###EMAIL_TEMPLATE_CREATE_SAVED### begin
  Diese Vorlage wird benötigt, um einen Benutzer darüber zu informieren, das er für den Newsletter registriert wurde.
 	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 -->
-	<!--###SUB_RECORD###-->
+<!--###SUB_RECORD###-->
 Stefans TYPO3 Newsletteranmeldung
 
 Hallo ###FIELD_name###
@@ -336,8 +336,8 @@ Wenn Du Deine Anmeldung ablehnen willst (z.B. falls jemand anders Dich angemelde
 
 Wenn Du Deine Daten bearbeiten willst, dann klick bitte hier:
 ###THIS_URL######FORM_URL###?cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
-	<!--###SUB_RECORD###-->
-	<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### end-->
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### end-->
 </pre>
 
 
@@ -350,20 +350,20 @@ Wenn Du Deine Daten bearbeiten willst, dann klick bitte hier:
 
 
 <em>Diese Vorlage wird verwendet, um den Administrator über diese neue Anmeldung zu informieren.<br />
-	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
+You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 </em>
 <pre>
 <!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### begin
 	Diese Vorlage wird verwendet, um den Administrator über diese neue Anmeldung zu informieren.
 	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 -->
-	<!--###SUB_RECORD###-->
+<!--###SUB_RECORD###-->
 Administrator: Eine neue Anmeldung für den Newsletter
 
 Name: ###FIELD_name###
 E-Mail: ###FIELD_email###
-	<!--###SUB_RECORD###-->
-	<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### end-->
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### end-->
 </pre>
 
 
@@ -380,7 +380,7 @@ E-Mail: ###FIELD_email###
 <!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### begin
  Diese Vorlage wird versendet, wenn der Benutzer sein Profil bearbeiten möchte
 -->
-	<!--###SUB_RECORD###-->
+<!--###SUB_RECORD###-->
 Stefans TYPO3 Newsletter. Bearbeitungslinks
 
 Hallo ###FIELD_name###
@@ -390,8 +390,8 @@ Klick hier, wenn Du Deine persönlichen Daten bearbeiten willst
 
 Klick hier, wenn Du Dich vom Newsletter abnelden/löschen willst
 ###THIS_URL######FORM_URL###&cmd=delete&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
-	<!--###SUB_RECORD###-->
-	<!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### end-->
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### end-->
 </pre>
 
 
@@ -413,7 +413,7 @@ Datensatz nicht gefunden!
 Du hast Daten einer Registrierung angefordert, die nicht in der Datenbank gefunden werden konnten.
 
 Sorry.
-	<!-- ###EMAIL_TEMPLATE_NORECORD### end-->
+<!-- ###EMAIL_TEMPLATE_NORECORD### end-->
 </pre>
 </body>
 </html>
