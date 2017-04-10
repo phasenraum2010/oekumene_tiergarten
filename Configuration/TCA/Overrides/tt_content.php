@@ -2,11 +2,7 @@
 defined('TYPO3_MODE') or die();
 call_user_func(function () {
 
-    //$frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
-    //$customLanguageFilePrefix = 'LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:';
-    //$languageFilePrefix = 'LLL:EXT:oekumene_tiergarten/Resources/Private/Language/locallang_be.xlf:';
     $dbFilePrefix = 'LLL:EXT:oekumene_tiergarten/Resources/Private/Language/locallang_db.xlf:';
-    $tcaFilePrefix = 'LLL:EXT:oekumene_tiergarten/Resources/Private/Language/Tca.xlf:';
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -21,64 +17,9 @@ call_user_func(function () {
     );
 
     $tempContentColumns = [
-        'tx_kirche_street_address' => [
-            'label' => $tcaFilePrefix . 'tx_kirche_street_address.config',
-            'config' => [
-                'type' => 'input',
-                'size' => '50',
-                'maxlength' => '1024'
-            ]
-        ],
-        'bodytext' => [
-            'label' => $tcaFilePrefix . 'bodytext.config',
-            'config' => [
-                'type' => 'text',
-                'enableRichtext' => true,
-            ]
-        ],
-        'tx_kirche_address_street' => [
-            'label' => $tcaFilePrefix . 'tx_kirche_address_street.config',
-            'config' => [
-                'type' => 'input',
-                'size' => '50',
-                'maxlength' => '100'
-            ],
-        ],
-        'tx_kirche_address_city' => [
-            'label' => $tcaFilePrefix . 'tx_kirche_address_city.config',
-            'config' => [
-                'type' => 'input',
-                'size' => '50',
-                'maxlength' => '100'
-            ],
-        ],
-        'tx_kirche_address_zip' => [
-            'label' => $tcaFilePrefix . 'tx_kirche_address_zip.config',
-            'config' => [
-                'type' => 'input',
-                'size' => '50',
-                'maxlength' => '100'
-            ],
-        ],
-        'tx_kirche_address_state' => [
-            'label' => $tcaFilePrefix . 'tx_kirche_address_state.config',
-            'config' => [
-                'type' => 'input',
-                'size' => '50',
-                'maxlength' => '100'
-            ]
-        ],
-        'tx_kirche_address_country' => [
-            'label' => $tcaFilePrefix . 'tx_kirche_address_country.config',
-            'config' => [
-                'type' => 'input',
-                'size' => '50',
-                'maxlength' => '100'
-            ]
-        ],
         'tt_address_uid' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:pi_tt_address',
+            'label' => $dbFilePrefix . 'palette.kircheaddress',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -97,13 +38,9 @@ call_user_func(function () {
 
 
     $GLOBALS['TCA']['tt_content']['types']['kirche'] = $GLOBALS['TCA']['tt_content']['types']['textmedia'];
+    
+    $tmpPaletteKircheaddress = '';
 
-
-    $tmpPaletteKircheaddress = 'tx_kirche_address_street;' . $dbFilePrefix . 'tx_kirche_address_street_formlabel,
-	 --linebreak--, tx_kirche_address_city;' . $dbFilePrefix . 'tx_kirche_address_city_formlabel,
-	 --linebreak--, tx_kirche_address_zip;' . $dbFilePrefix . 'tx_kirche_address_zip_formlabel,
-	 --linebreak--, tx_kirche_address_state;' . $dbFilePrefix . 'tx_kirche_address_state,
-	 --linebreak--, tx_kirche_address_country;' . $dbFilePrefix . 'tx_kirche_address_country_formlabel';
 
     $kircheShowItem = '
     --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
@@ -125,6 +62,7 @@ call_user_func(function () {
 
     $GLOBALS['TCA']['tt_content']['palettes']['kircheaddress']['showitem'] = $tmpPaletteKircheaddress;
     unset($tmpPaletteKircheaddress);
+
 
     $GLOBALS['TCA']['tt_content']['types']['kirche']['showitem'] = $kircheShowItem;
     unset($kircheShowItem);

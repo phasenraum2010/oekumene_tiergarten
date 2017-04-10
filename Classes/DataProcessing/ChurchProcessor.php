@@ -76,11 +76,18 @@ class ChurchProcessor implements DataProcessorInterface
             'description' => $ttAddress->getDescription(),
         ];
 
+        $street = $ttAddress->getAddress();
+        $city = $ttAddress->getCity();
+        $zip = $ttAddress->getZip();
+        $state= $ttAddress->getRegion();
+        $country = $ttAddress->getCountry();
+        /*
         $street=$processedData['data']['tx_kirche_address_street'];
         $city=$processedData['data']['tx_kirche_address_city'] ;
         $state=$processedData['data']['tx_kirche_address_state'] ;
         $zip=$processedData['data']['tx_kirche_address_zip'];
         $country=$processedData['data']['tx_kirche_address_state_country'];
+        */
         $processedData['data']['tx_kirche_street_address']=$street.', '.$zip.' '.$city;
         $key=NULL;
         $width='320';
@@ -89,10 +96,11 @@ class ChurchProcessor implements DataProcessorInterface
         $long='13.3317411';
         $zoom='15';
         $mapName=$processedData['data']['header'];
-        $map = new Map($key, $width, $height,$lat, $long, $zoom,$mapName);
+        $subheader=$processedData['data']['subheader'];
+        $map = new Map($key, $width, $height,$lat, $long, $zoom, $mapName);
         $tabLabels = [$mapName];
-        $title=[ '<b>'.$processedData['data']['header'].'</b>' ];
-        $desc='<br/>'.$processedData['data']['subheader'].'<br/>'.$processedData['data']['tx_kirche_address_street'].'<br/>' .$processedData['data']['tx_kirche_address_zip'].' '.$processedData['data']['tx_kirche_address_city'].'<br/><br/>';
+        $title=[ '<b>'.$mapName.'</b>' ];
+        $desc='<br/>'.$subheader.'<br/>'.$street.'<br/>' .$zip.' '.$city.'<br/><br/>';
         $description=[$desc];
         $map->addMarkerByAddressWithTabs($street, $city, $state, $zip, $country,$tabLabels,$title,$description);
         $map->setCenterByAddress($street, $city, $state, $zip, $country);

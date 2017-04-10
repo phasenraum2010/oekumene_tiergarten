@@ -20,22 +20,6 @@
 				<target>Konfiguration Text</target>
 			</trans-unit>
 
-			<trans-unit id="tx_kirche_address_street.config">
-				<target>Staße</target>
-			</trans-unit>
-			<trans-unit id="tx_kirche_address_city.config">
-				<target>Stadt</target>
-			</trans-unit>
-			<trans-unit id="tx_kirche_address_zip.config">
-				<target>PLZ</target>
-			</trans-unit>
-			<trans-unit id="tx_kirche_address_state.config">
-				<target>Bundesland</target>
-			</trans-unit>
-			<trans-unit id="tx_kirche_address_country.config">
-				<target>Land</target>
-			</trans-unit>
-
 		</body>
 	</file>
 </xliff>
