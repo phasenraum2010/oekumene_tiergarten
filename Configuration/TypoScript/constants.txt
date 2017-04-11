@@ -179,8 +179,8 @@ plugin {
 	}
 	feadmin.dmailsubscription {
 		file.templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
-		email = thomas@woehlke.org
-		emailName = Thomas Wöhlke
+		email = newsletter@oekumene-tiergarten.de
+		emailName = Newsletter der Oekumene Tiergarten
 		pid = 33
 		wrap1 = <div class="tw-font-size-2-black"> | </div>
 		wrap2 = <div class="tw-font-size-1-black"> | </div>
