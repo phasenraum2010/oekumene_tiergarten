@@ -81,13 +81,6 @@ class ChurchProcessor implements DataProcessorInterface
         $zip = $ttAddress->getZip();
         $state= $ttAddress->getRegion();
         $country = $ttAddress->getCountry();
-        /*
-        $street=$processedData['data']['tx_kirche_address_street'];
-        $city=$processedData['data']['tx_kirche_address_city'] ;
-        $state=$processedData['data']['tx_kirche_address_state'] ;
-        $zip=$processedData['data']['tx_kirche_address_zip'];
-        $country=$processedData['data']['tx_kirche_address_state_country'];
-        */
         $processedData['data']['tx_kirche_street_address']=$street.', '.$zip.' '.$city;
         $key=NULL;
         $width='320';
