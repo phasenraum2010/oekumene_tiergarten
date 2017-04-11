@@ -15,14 +15,14 @@ config {
 plugin {
 	tx_felogin_pi1 {
 		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/felogin/FrontendLogin.html
-		email_from = thomas@woehlke.org
+		email_from = newsletter@oekumene-tiergarten.de
 		email_fromName = Thomas Wöhlke
-		replyTo = thomas@woehlke.org
+		replyTo = newsletter@oekumene-tiergarten.de
 		_CSS_DEFAULT_STYLE >
 	}
 	tx_indexedsearch {
 		_CSS_DEFAULT_STYLE >
-		templateFile = EXT:t3sbootstrap/Resources/Private/Extensions/indexed_search/indexed_search.html
+		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/indexed_search.html
 	}
 	tx_powermail {
 		view {
@@ -55,6 +55,9 @@ plugin {
 		color1.wrap = {$plugin.feadmin.dmailsubscription.color1}
 		color2.wrap = {$plugin.feadmin.dmailsubscription.color2}
 		color3.wrap = {$plugin.feadmin.dmailsubscription.color3}
+	}
+	tx_indexedsearch {
+		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/indexed_search.html
 	}
 	tx_oekumene_tiergarten {
 		settings {
@@ -145,9 +148,9 @@ tt_content {
 }
 
 plugin.tx_felogin_pi1.templateFile = EXT:oekumene_tiergarten/Resources/Private/Templates/FrontendLogin.html
-plugin.tx_felogin_pi1.email_from = thomas@woehlke.org
+plugin.tx_felogin_pi1.email_from = newsletter@oekumene-tiergarten.de
 plugin.tx_felogin_pi1.email_fromName = Thomas Wöhlke
-plugin.tx_felogin_pi1.replyTo = thomas@woehlke.org
+plugin.tx_felogin_pi1.replyTo = newsletter@oekumene-tiergarten.de
 plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
 
 

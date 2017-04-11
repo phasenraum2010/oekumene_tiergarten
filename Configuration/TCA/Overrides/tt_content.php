@@ -38,7 +38,7 @@ call_user_func(function () {
 
 
     $GLOBALS['TCA']['tt_content']['types']['kirche'] = $GLOBALS['TCA']['tt_content']['types']['textmedia'];
-
+    
     $tmpPaletteKircheaddress = '';
 
 

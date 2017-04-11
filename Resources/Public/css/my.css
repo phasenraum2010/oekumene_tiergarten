@@ -108,3 +108,11 @@ i.tx-kirche-icon-person.fa.fa-user-circle {
 	display: inline-block;
 }
 
+/*.tx-indexedsearch */
+.tx-indexedsearch-res .tx-indexedsearch-info {
+	background: #eeeeee;
+}
+
+span.tx-indexedsearch-percent {
+	float: right;
+}

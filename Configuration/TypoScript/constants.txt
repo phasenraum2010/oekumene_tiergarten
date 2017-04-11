@@ -111,7 +111,7 @@ plugin {
 				randomizeFileName = 1
 			}
 			spamshield {
-				email = thomas@woehlke.org
+				email = newsletter@oekumene-tiergarten.de
 				logfileLocation = typo3temp/logs/powermail_spam.log
 				emailSubject = Spam in powermail form recognized at oekumene-tiergarten-test
 			}
@@ -185,6 +185,13 @@ plugin {
 		wrap1 = <div class="tw-font-size-2-black"> | </div>
 		wrap2 = <div class="tw-font-size-1-black"> | </div>
 		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
+	}
+	tx_indexedsearch {
+		view {
+			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/Templates
+			partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/Partials
+			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/Layouts
+		}
 	}
 }
 
