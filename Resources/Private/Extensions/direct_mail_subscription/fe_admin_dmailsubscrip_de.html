@@ -676,10 +676,11 @@
 <br />
 <br />
 <H1>EMAIL TEMPLATES:</H1>
-In these plain text email templates the first line with content is used as subject in the mails.<br />
+Diese Schablonen sind fuer die Text-Mails.
+Jeweils die ersten Zeile der Betreff der Mail.<br />
 
 <br /><br /><br /><br /><HR><br /><br /><br />
-<em>This template is used to notify a person by email that he is subscribed to the newsletter.<br />
+<em>Diese Mail wird versendet, um einen Benutzer darüber zu informieren, das er für den Newsletter registriert wurde.<br />
 	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 </em>
 <br />
@@ -692,22 +693,30 @@ In these plain text email templates the first line with content is used as subje
 	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 -->
 	<!--###SUB_RECORD###-->
-TYPO3 Direct Mailer
+Ihre Anmeldung zum Newsletter von oekumene-tiergarten.de ist vorgemerkt
 
-Dear ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
+Hallo ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
 
-You're now subscribed to a TYPO3 Testsite newsletter.
+Sie wurden mit dieser Email-Adresse vorgemerkt für unseren Email-Newsletters.
+
 
 IMPORTANT:
 
-Before your subscriptions is fully enabled, you must click this link:
+Um Ihre Anmeldung zu bestätigen, klicken Sie bitte auf diesen Link.
+Bitte beachte Sie, dass Ihre Anmeldung inaktiv bleibt, solange Sie diesen Aktivierungslink in  noch nicht angeklickt haben!<br />
+Dieses Verfahren zur Anmeldung nennt man Double-Opt-In; es ist gesetzlich vorgeschrieben, dient Ihrer und unserer Sicherheit und vermeidet Spam.
 ###THIS_URL######FORM_URL###1=1###SYS_SETFIXED_approve###
 
-If you cannot accept the subscription (eg. if somebody else subscribed you!) just click this link and you're deleted from the database:
+Wenn Du Deine Anmeldung ablehnen willst (z.B. falls jemand anders Dich angemeldet haben sollte!) einfach auf diesen Link klicken, um Dich aus der Datenbank zu löschen:
 ###THIS_URL######FORM_URL###1=1###SYS_SETFIXED_DELETE###
 
-If you wish to edit your personal data, click this link:
+Wenn Sie Ihre Angaben zum Newsletter ändern wollen, dann bitte hier klicken:
 ###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+Vielen Dank und Beste Gruesse
+
+Der Ökumenische Arbeitskreis Tiergarten
+http://oekumene-tiergarten.de
 
 	<!--###SUB_RECORD###-->
 	<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### end-->
@@ -717,7 +726,7 @@ If you wish to edit your personal data, click this link:
 
 
 <br /><br /><br /><br /><HR><br /><br /><br />
-<em>This template is used to notify a person by email that he has confirmed the subscription.<br />
+<em>Diese Mail wird an den Benutzer versendet, nachdem die Anmeldung bestätigt wurde.<br />
 	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 </em>
 <br />
@@ -730,14 +739,22 @@ If you wish to edit your personal data, click this link:
 	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 -->
 	<!--###SUB_RECORD###-->
-TYPO3 Direct Mailer
+Newsletter Oekumene Tiergarten: Herzlich willkommen
 
-Dear ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
+Hallo ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
 
-You have successfully confirmed your subscription.
+Herzlich willkommen!
+Sie haben Ihre Anmeldung zum Newsletter von Oekumene Tiergarten bestätigt.
+Sie erhalten ab jetzt den Newsletter von oekumene-tiergarten.de
 
-If you wish to edit your personal data, click this link:
+Wenn Sie Ihre Angaben zum Newsletter ändern wollen, dann klicken Sie bitte hier:
 ###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+Vielen Dank und Beste Gruesse
+
+Der Ökumenische Arbeitskreis Tiergarten
+http://oekumene-tiergarten.de
+
 
 	<!--###SUB_RECORD###-->
 	<!-- ###EMAIL_TEMPLATE_SETFIXED_approve### end-->
@@ -760,7 +777,7 @@ If you wish to edit your personal data, click this link:
 	You can use the newly created record as markers on the format ###FIELD_[fieldname]###
 -->
 	<!--###SUB_RECORD###-->
-Admin: New subscription
+Newsletter Oekumene Tiergarten: Admin: Neue Anmeldung
 
 Name: ###FIELD_name###
 Email: ###FIELD_email###
@@ -780,15 +797,20 @@ Email: ###FIELD_email###
 	The template for forgotten passwords (infomail 'FORGOTPASSWORD' template!)
 -->
 	<!--###SUB_RECORD###-->
-TYPO3 Testsite Newsletter, Admin link
+Newsletter Oekumene Tiergarten: Bearbeitungs-Link
 
-Dear ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
+Hallo ###FIELD_tx_directmailsubscription_localgender### ###FIELD_name###
 
-Click here to edit your personal data
+Wenn Sie Ihre Angaben zum Newsletter oder das Passwort ändern wollen, dann klicken Sie bitte hier:
 ###THIS_URL######FORM_URL###&cmd=edit&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
 
-Click here to DELETE (!) your subscription
+Zum Beenden des Abonnements, klicken Sie hier:
 ###THIS_URL######FORM_URL###&cmd=delete&aC=###SYS_AUTHCODE###&rU=###FIELD_uid###
+
+Vielen Dank und Beste Gruesse
+
+Der Ökumenische Arbeitskreis Tiergarten
+http://oekumene-tiergarten.de
 	<!--###SUB_RECORD###-->
 	<!-- ###EMAIL_TEMPLATE_FORGOTPASSWORD### end-->
 </pre>
@@ -805,11 +827,16 @@ Click here to DELETE (!) your subscription
 <!-- ###EMAIL_TEMPLATE_NORECORD### begin
 	Template used if the infomail was empty!
 -->
-Record not found.
+Newsletter Oekumene Tiergarten: Keine Daten vohanden.
 
-You have requested information about a subscription, but nothing was found.
+Sie haben Informationen zu einem Newsletter-Abonneement angefordert, jedoch konnte wir dazu keine Daten finden.
 
-Sorry.
+Tut uns leid.
+
+Vielen Dank und Beste Gruesse
+
+Der Ökumenische Arbeitskreis Tiergarten
+http://oekumene-tiergarten.de
 
 	<!-- ###EMAIL_TEMPLATE_NORECORD### end-->
 </pre>
