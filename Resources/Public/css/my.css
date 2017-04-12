@@ -104,8 +104,29 @@ i.tx-kirche-icon-fax.fa.fa-fax,
 i.tx-kirche-icon-kalender.fa.fa-calendar,
 i.tx-kirche-icon-person.fa.fa-user-circle {
 	float: left;
-	width: 30px;
 	display: inline-block;
+	width: 20px;
+	line-height: 26px;
+}
+
+div.extra .glyphicon,
+div.extra .fa,
+div.extra .map-icon {
+	width: 20px;
+	line-height: 26px;
+}
+
+p {
+	line-height: 26px;
+}
+
+.news-single .extra {
+	margin-top: 26px;
+	margin-bottom: 26px;
+}
+
+.news-single .lead {
+	font-size: 18px;
 }
 
 /*.tx-indexedsearch */
@@ -116,3 +137,29 @@ i.tx-kirche-icon-person.fa.fa-user-circle {
 span.tx-indexedsearch-percent {
 	float: right;
 }
+
+
+/*
+.news-single .like {
+	margin-bottom: 1rem;
+	display: inline-block;
+	float: left;
+}
+
+.news-single .share {
+	margin-bottom: 1rem;
+	float: left;
+}
+
+.news-single .twitter {
+	margin-top: 0.6rem;
+	display: inline-block;
+	float: left;
+}
+*/
+
+
+
+
+
+

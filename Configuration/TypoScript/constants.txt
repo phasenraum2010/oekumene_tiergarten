@@ -143,11 +143,41 @@ plugin {
 		}
 	}
 	tx_news {
+		view {
+			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Templates
+			partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Partials/
+			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Layouts/
+			twb {
+				templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Templates
+				partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Partials/
+				layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Layouts/
+			}
+		}
 		settings {
 			sitemap {
 				startingpoint = 5
 				detailPid = 6
 				recursive = 4
+			}
+			cssFile = EXT:oekumene_tiergarten/Resources/Public/css/news-basic.css
+		}
+		rss.channel {
+			title = Der Ökumenische Arbeitskreis Tiergarten
+			description = Aus Freude am Glauben für eine gute Nachbarschaft
+			link = http://oekumene-tiergarten-test.natural-born-coder.de/
+			language = de-de
+			copyright = Evangelische Kirchengemeinde Tiergarten
+			category =
+			generator = TYPO3 EXT:news
+		}
+
+		opengraph {
+			site_name = Der Ökumenische Arbeitskreis Tiergarten
+
+			twitter {
+				card = summary
+				site =
+				creator =
 			}
 		}
 	}

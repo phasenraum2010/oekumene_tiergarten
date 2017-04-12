@@ -38,7 +38,23 @@ plugin {
 		}
 	}
 	tx_news {
-		settings.list.media.dummyImage = typo3conf/ext/oekumene_tiergarten/Resources/Public/Images/logo_oekumene.jpg
+		view {
+			templateRootPaths {
+				10 = {$plugin.tx_news.view.twb.templateRootPath}
+			}
+			partialRootPaths {
+				10 = {$plugin.tx_news.view.twb.partialRootPath}
+			}
+			layoutRootPaths {
+				10 = {$plugin.tx_news.view.twb.layoutRootPath}
+			}
+		}
+		settings {
+			facebookLocale = de_DE
+			googlePlusLocale = de
+			disqusLocale = de
+			list.media.dummyImage = typo3conf/ext/oekumene_tiergarten/Resources/Public/Images/logo_oekumene.jpg
+		}
 	}
 	feadmin.dmailsubscription {
 		templateFile ={$plugin.feadmin.dmailsubscription.file.templateFile}
@@ -147,17 +163,12 @@ tt_content {
 	}
 }
 
-plugin.tx_felogin_pi1.templateFile = EXT:oekumene_tiergarten/Resources/Private/Templates/FrontendLogin.html
-plugin.tx_felogin_pi1.email_from = newsletter@oekumene-tiergarten.de
-plugin.tx_felogin_pi1.email_fromName = Thomas Wöhlke
-plugin.tx_felogin_pi1.replyTo = newsletter@oekumene-tiergarten.de
-plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
+#plugin.tx_felogin_pi1.templateFile = EXT:oekumene_tiergarten/Resources/Private/Templates/FrontendLogin.html
+#plugin.tx_felogin_pi1.email_from = newsletter@oekumene-tiergarten.de
+#plugin.tx_felogin_pi1.email_fromName = Thomas Wöhlke
+#plugin.tx_felogin_pi1.replyTo = newsletter@oekumene-tiergarten.de
+#plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
 
-
-
-# **********************************************************
-# Library for indexed_search
-# **********************************************************
 
 
 

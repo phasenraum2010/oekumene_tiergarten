@@ -107,26 +107,30 @@
 
 ###STATUS_HEADER###
 ###STATUS_MESSAGE###
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-12 col-sm-12">
+			<form action="###ACTION_URI###" target="_top" method="post" class="form-horizontal">
+				<fieldset>
+				<legend>###LEGEND###</legend>
+				<div>
+					<label>###USERNAME_LABEL###</label>
+					###USERNAME###
+				</div>
+				<div>
+					<input type="submit" name="submit" value="###LOGOUT_LABEL###" class="btn btn-primary" />
+				 </div>
 
-<form action="###ACTION_URI###" target="_top" method="post">
-	<fieldset>
-	<legend>###LEGEND###</legend>
-	<div>
-		<label>###USERNAME_LABEL###</label>
-	 	###USERNAME###
-    </div>
-	<div>
-		<input type="submit" name="submit" value="###LOGOUT_LABEL###" />
-	 </div>
-
-	<div class="felogin-hidden">
-		<input type="hidden" name="logintype" value="logout" />
-		<input type="hidden" name="pid" value="###STORAGE_PID###" />
-		<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+				<div class="felogin-hidden">
+					<input type="hidden" name="logintype" value="logout" />
+					<input type="hidden" name="pid" value="###STORAGE_PID###" />
+					<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+				</div>
+				</fieldset>
+			</form>
+		</div>
 	</div>
-	</fieldset>
-</form>
-
+</div>
 <!--###TEMPLATE_LOGOUT###-->
 
 <!--###TEMPLATE_FORGOT###-->
