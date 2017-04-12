@@ -114,6 +114,7 @@ div.extra .fa,
 div.extra .map-icon {
 	width: 20px;
 	line-height: 26px;
+	margin-right: 10px;
 }
 
 p {
@@ -129,6 +130,15 @@ p {
 	font-size: 18px;
 }
 
+.news-single span.tx-kirche-pipe {
+	margin-left: 18px;
+	margin-right: 18px;
+}
+
+.tx-kirche-nowrap {
+	white-space:nowrap;
+}
+
 /*.tx-indexedsearch */
 .tx-indexedsearch-res .tx-indexedsearch-info {
 	background: #eeeeee;
@@ -139,24 +149,6 @@ span.tx-indexedsearch-percent {
 }
 
 
-/*
-.news-single .like {
-	margin-bottom: 1rem;
-	display: inline-block;
-	float: left;
-}
-
-.news-single .share {
-	margin-bottom: 1rem;
-	float: left;
-}
-
-.news-single .twitter {
-	margin-top: 0.6rem;
-	display: inline-block;
-	float: left;
-}
-*/
 
 
 

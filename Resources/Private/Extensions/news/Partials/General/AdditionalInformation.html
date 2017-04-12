@@ -2,27 +2,37 @@
 	<!-- author -->
 
 	<f:if condition="{newsItem.author}">
+		<span class="tx-kirche-nowrap">
 		<span class="glyphicon glyphicon-user"></span>
-		<f:translate key="author" arguments="{0:newsItem.author}" /> &nbsp;&nbsp;| &nbsp;&nbsp;
+		<f:translate key="author" arguments="{0:newsItem.author}"/>
+		<span class="tx-kirche-pipe">|</span>
+		</span>
 	</f:if>
 
-	<!-- date -->          <span class="glyphicon glyphicon-calendar"> </span>
+	<!-- date --> <span class="tx-kirche-nowrap"><span class="glyphicon glyphicon-calendar"> </span>
 	<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
 		<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-		<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+		<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}"/>
 	</time>
+</span>
 
 	<!-- category -->
 	<f:if condition="{newsItem.firstCategory}">
-		&nbsp;&nbsp;| &nbsp;&nbsp;<span class="glyphicon glyphicon-tags"> </span>&nbsp;
+		<span class="tx-kirche-nowrap">
+		<span class="tx-kirche-pipe">|</span><span class="glyphicon glyphicon-tags"> </span>&nbsp;
 		<span class="label label-info">{newsItem.firstCategory.title}</span>
+		</span>
 	</f:if>
 
 	<f:if condition="{newsItem.tags}">
-		&nbsp;&nbsp;| &nbsp;&nbsp;<span class="glyphicon glyphicon-tags"> </span> <span class="news-list-tags" itemprop="keywords">
-		<f:for each="{newsItem.tags}" as="tag">
-			<span class="label label-info">{tag.title}</span>
-		</f:for>
-	</span>
+		<span class="tx-kirche-nowrap">
+		<span class="tx-kirche-pipe">|</span>
+			<span class="glyphicon glyphicon-tags"> </span>
+			<span class="news-list-tags" itemprop="keywords">
+				<f:for each="{newsItem.tags}" as="tag">
+					<span class="label label-info">{tag.title}</span>
+				</f:for>
+			</span>
+		</span>
 	</f:if>
 </div>
