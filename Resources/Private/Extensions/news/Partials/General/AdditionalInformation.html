@@ -5,7 +5,7 @@
 		<span class="tx-kirche-nowrap">
 		<span class="glyphicon glyphicon-user"></span>
 		<f:translate key="author" arguments="{0:newsItem.author}"/>
-		<span class="tx-kirche-pipe">|</span>
+		<span class="tx-kirche-pipe">&nbsp;</span>
 		</span>
 	</f:if>
 
@@ -19,15 +19,15 @@
 	<!-- category -->
 	<f:if condition="{newsItem.firstCategory}">
 		<span class="tx-kirche-nowrap">
-		<span class="tx-kirche-pipe">|</span><span class="glyphicon glyphicon-tags"> </span>&nbsp;
+		<span class="tx-kirche-pipe">&nbsp;</span><span class="glyphicon glyphicon-tags"> </span>&nbsp;
 		<span class="label label-info">{newsItem.firstCategory.title}</span>
 		</span>
 	</f:if>
 
 	<f:if condition="{newsItem.tags}">
 		<span class="tx-kirche-nowrap">
-		<span class="tx-kirche-pipe">|</span>
-			<span class="glyphicon glyphicon-tags"> </span>
+		<span class="tx-kirche-pipe">&nbsp;</span>
+			<span class="glyphicon glyphicon-tags"> </span>&nbsp;
 			<span class="news-list-tags" itemprop="keywords">
 				<f:for each="{newsItem.tags}" as="tag">
 					<span class="label label-info">{tag.title}</span>

@@ -43,18 +43,6 @@ iframe, object, embed {
 	padding-bottom: 75%;
 }
 
-.tx-kirche-street-address {
-	white-space: normal;
-	display: inline;
-	font-size: x-large;
-	font-weight: normal;
-	line-height: 1;
-	color: #999999;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-bottom: 14px;
-}
-
 #jumbotron-header h1 span.header-h1,
 #jumbotron-header h1 small {
 	color: rgb(85, 85, 85);
@@ -84,17 +72,46 @@ img {
 
 }
 
-h3.tx-kirche-info {
+
+.kirche .tx-kirche-street-address {
+	white-space: normal;
+	display: inline;
+	font-size: x-large;
+	font-weight: normal;
+/*	line-height: 1; */
+	color: #999999;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 14px;
+}
+
+.kirche h3.tx-kirche-info {
 	margin-top: 0px;
 }
 
-dl.tx-kirche-info dt {
+.kirche dl.tx-kirche-info dt {
 	float: left;
-	width: 30px;
+	clear: left;
 }
 
-dl.tx-kirche-info dd {
+.kirche dl.tx-kirche-info dd {
 }
+
+/*
+.kirche .tx-kirche-info span.tx-kirche-icon-standort.map-icon.map-icon-postal-code,
+.kirche .tx-kirche-info span.tx-kirche-icon-webseite.glyphicon.glyphicon-link,
+.kirche .tx-kirche-info i.tx-kirche-icon-email.fa.fa-envelope,
+.kirche .tx-kirche-info i.tx-kirche-icon-telefon.fa.fa-phone,
+.kirche .tx-kirche-info i.tx-kirche-icon-fax.fa.fa-fax,
+.kirche .tx-kirche-info i.tx-kirche-icon-kalender.fa.fa-calendar,
+.kirche .tx-kirche-info i.tx-kirche-icon-person.fa.fa-user-circle,
+.kirche .tx-kirche-info i.tx-kirche-icon-twitter.fa.fa-twitter,
+.kirche .tx-kirche-info i.tx-kirche-icon-facebook.fa.fa-facebook-official {
+	display: inline-block;
+	width: 30px;
+	line-height: 26px;
+}
+*/
 
 span.tx-kirche-icon-standort.map-icon.map-icon-postal-code,
 span.tx-kirche-icon-webseite.glyphicon.glyphicon-link,
@@ -102,23 +119,28 @@ i.tx-kirche-icon-email.fa.fa-envelope,
 i.tx-kirche-icon-telefon.fa.fa-phone,
 i.tx-kirche-icon-fax.fa.fa-fax,
 i.tx-kirche-icon-kalender.fa.fa-calendar,
-i.tx-kirche-icon-person.fa.fa-user-circle {
-	float: left;
+i.tx-kirche-icon-person.fa.fa-user-circle,
+i.tx-kirche-icon-twitter.fa.fa-twitter,
+i.tx-kirche-icon-facebook.fa.fa-facebook-official {
 	display: inline-block;
-	width: 20px;
-	line-height: 26px;
 }
 
-div.extra .glyphicon,
-div.extra .fa,
-div.extra .map-icon {
-	width: 20px;
-	line-height: 26px;
-	margin-right: 10px;
+.kirche .tx-kirche-street-address span.tx-kirche-icon-standort.map-icon.map-icon-postal-code {
+
 }
 
-p {
-	line-height: 26px;
+.kirche .tx-kirche-info .glyphicon,
+.kirche .tx-kirche-info .fa,
+.kirche .tx-kirche-info .map-icon {
+	width: 30px;
+}
+
+.news-single .extra .glyphicon,
+.news-single .extra .fa,
+.news-single .extra .map-icon {
+	width: 20px;
+	/* line-height: 26px; */
+	margin-right: 1px;
 }
 
 .news-single .extra {
@@ -131,8 +153,8 @@ p {
 }
 
 .news-single span.tx-kirche-pipe {
-	margin-left: 18px;
-	margin-right: 18px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .tx-kirche-nowrap {
@@ -147,6 +169,7 @@ p {
 span.tx-indexedsearch-percent {
 	float: right;
 }
+
 
 
 

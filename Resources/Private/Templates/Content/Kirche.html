@@ -11,7 +11,7 @@
 			<div class="col-xs-12 col-md-12 col-sm-12">
 				<f:if condition="{data.tx_kirche_street_address}">
 					<div class="tx-kirche-street-address">
-						<span class="map-icon map-icon-postal-code"></span>
+						<span class="tx-kirche-icon-standort map-icon map-icon-postal-code"></span>
 						{data.tx_kirche_street_address -> f:format.raw()}<br/><br/>
 					</div>
 				</f:if>
@@ -24,17 +24,17 @@
 			<div class="col-xs-12 col-md-8 col-sm-8">
 					<h3 class="tx-kirche-info"><strong>{data.ttAddress.position}</strong></h3>
 					<dl class="tx-kirche-info">
-						<dt><i class="fa fa-envelope"></i></dt>
+						<dt><i class="tx-kirche-icon-email fa fa-envelope"></i></dt>
 						<dd><f:link.email email="{data.ttAddress.email}" /></dd>
-						<dt><i class="fa fa-phone" aria-hidden="true"></i></dt>
+						<dt><i class="tx-kirche-icon-telefon fa fa-phone" aria-hidden="true"></i></dt>
 						<dd>{data.ttAddress.phone}</dd>
-						<dt><span class="map-icon map-icon-postal-code"></span></dt>
+						<dt><span class="tx-kirche-icon-standort map-icon map-icon-postal-code"></span></dt>
 						<dd>Pfarrbüro: {data.ttAddress.building},
 						{data.ttAddress.address},
 						{data.ttAddress.zip}
 							{data.ttAddress.city}</dd>
 						<f:if condition="{data.ttAddress.description}">
-							<dt><i class="fa fa-calendar" aria-hidden="true"></i></dt>
+							<dt><i class="tx-kirche-icon-kalender fa fa-calendar" aria-hidden="true"></i></dt>
 							<dd>{data.ttAddress.description}</dd>
 						</f:if>
 					</dl>
@@ -43,16 +43,16 @@
 					<dt><span class="tx-kirche-icon-webseite glyphicon glyphicon-link" aria-hidden="true"></span></dt>
 					<dd><f:link.external uri="{data.ttAddress.www}" target="_blank">{data.ttAddress.www}</f:link.external></dd>
 				<f:if condition="{data.ttAddress.twitter}">
-					<dt><i class="fa fa-twitter" aria-hidden="true"></i></dt>
+					<dt><i class="tx-kirche-icon-twitter fa fa-twitter" aria-hidden="true"></i></dt>
 					<dd><f:link.external uri="https://twitter.com/{data.ttAddress.twitter}" target="_blank">@{data.ttAddress.twitter}</f:link.external></dd>
 				</f:if>
 				<f:if condition="{data.ttAddress.facebook}">
-					<dt><i class="fa fa-facebook-official" aria-hidden="true"></i></dt>
+					<dt><i class="tx-kirche-icon-facebook fa fa-facebook-official" aria-hidden="true"></i></dt>
 					<dd><f:link.external uri="https://www.facebook.com{data.ttAddress.facebook}" target="_blank">www.facebook.com{data.ttAddress.facebook}</f:link.external></dd>
 				</f:if>
 				</dl>
 				<f:if condition="{data.bodytext}">
-					<div class="bodytext">
+					<div class="bodytext tx-kirche-info">
 						{data.bodytext -> f:format.html()}
 					</div>
 				</f:if>
