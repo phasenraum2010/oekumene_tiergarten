@@ -165,7 +165,7 @@ plugin {
 		rss.channel {
 			title = Der Ökumenische Arbeitskreis Tiergarten
 			description = Aus Freude am Glauben für eine gute Nachbarschaft
-			link = http://oekumene-tiergarten-test.natural-born-coder.de/
+			link = http://oekumene-tiergarten-test.thomas-woehlke.de/
 			language = de-de
 			copyright = Evangelische Kirchengemeinde Tiergarten
 			category =
@@ -193,13 +193,13 @@ plugin {
 			geoPositionLongitude = 13.3470349
 			geoRegion = DE-BE
 			geoPlacename = Berlin
-			googleVerification = 4YcyuMUv5xbe1rdcBwsQdifaoDs4fJ6zem33iHVoC-I
+			googleVerification = I8IfQ4VW2PKwSjE4-AVEwf78y8mrkbOMYtx2Ut4nOQE
 		}
 		services {
 			googleAnalytics = UA-96623703-1
 			googleAnalytics.anonymizeIp = 1
 			piwik {
-				url = http://piwik.natural-born-coder.de
+				url = http://piwik.thomas-woehlke.de
 				id = 3
 			}
 		}

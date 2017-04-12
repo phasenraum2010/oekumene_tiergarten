@@ -9,6 +9,6 @@ plugin {
 		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
 	}
 	tx_directmail_pi1 {
-		siteUrl = http://oekumene-tiergarten-test.natural-born-coder.de
+		siteUrl = http://oekumene-tiergarten-test.thomas-woehlke.de
 	}
 }

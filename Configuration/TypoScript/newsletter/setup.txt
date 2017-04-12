@@ -1,8 +1,8 @@
 config {
 	disableAllHeaderCode = 0
 	disableAllHeaderCode = 0
-	absRefPrefix = http://oekumene-tiergarten-test.natural-born-coder.de/
-	baseURL = http://oekumene-tiergarten-test.natural-born-coder.de/
+	absRefPrefix = http://oekumene-tiergarten-test.thomas-woehlke.de/
+	baseURL = http://oekumene-tiergarten-test.thomas-woehlke.de/
 	compressCss = 0
 	compressJs = 0
 	concatenateCss = 0

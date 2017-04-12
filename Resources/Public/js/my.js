@@ -33,7 +33,7 @@ window[disableStr] = true;
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="//piwik.natural-born-coder.de/";
+    var u="//piwik.thomas-woehlke.de/";
     _paq.push(['setTrackerUrl', u+'piwik.php']);
     _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
