@@ -59,6 +59,7 @@ plugin {
 				hover = 0
 				search {
 					enable = 1
+					link = 1
 				}
 				excludeUidList = 4,3,18,17,24
 			}
