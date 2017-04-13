@@ -173,6 +173,8 @@ tt_content {
 #plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
 
 
+/*
+
 plugin.tx_cal_controller.subscribeFeUser = 1
 plugin.tx_cal_controller.subscribeWithCaptcha = 1
 plugin.tx_cal_controller.dateConfig.splitSymbol = .
@@ -198,5 +200,5 @@ plugin.tx_cal_controller.view.organizer.editOrganizerViewPid = 25
 plugin.tx_cal_controller.view.organizer.deleteOrganizerViewPid = 25
 plugin.tx_cal_controller.view.location.locationViewPid = 25
 
-
+*/
 
