@@ -75,9 +75,9 @@ plugin {
 	tx_indexedsearch {
 		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/indexed_search.html
 	}
-	tx_cal_controller {
+	#tx_cal_controller {
 
-	}
+	#}
 	tx_oekumene_tiergarten {
 		settings {
 			ttAdressPageId = {$plugin.tx_oekumene_tiergarten.settings.ttAdressPageId}
@@ -173,7 +173,7 @@ tt_content {
 #plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
 
 
-/*
+
 
 plugin.tx_cal_controller.subscribeFeUser = 1
 plugin.tx_cal_controller.subscribeWithCaptcha = 1
@@ -199,6 +199,23 @@ plugin.tx_cal_controller.view.organizer.createOrganizerViewPid = 25
 plugin.tx_cal_controller.view.organizer.editOrganizerViewPid = 25
 plugin.tx_cal_controller.view.organizer.deleteOrganizerViewPid = 25
 plugin.tx_cal_controller.view.location.locationViewPid = 25
+plugin.tx_cal_controller.view.event.event.defaultEventLength = 3600
+plugin.tx_cal_controller.view.location.createLocationViewPid = 25
+plugin.tx_cal_controller.view.location.editLocationViewPid = 25
+plugin.tx_cal_controller.view.location.deleteLocationViewPid = 25
 
-*/
+plugin.tx_cal_controller.view.year.event {
+	attachment =< tt_content.uploads
+	attachment {
+		dataProcessing.10.references >
+		dataProcessing.10.references {
+			table = tx_cal_event
+			uid.data = field:uid
+			fieldName = attachment
+		}
+	}
+}
+
+plugin.tx_cal_controller.view.month.showListInMonthView = 1
+
 

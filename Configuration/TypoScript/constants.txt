@@ -202,18 +202,6 @@ plugin {
 		}
 	}
 	tx_cal_controller {
-
-		rights {
-
-		}
-		view {
-
-		}
-		rss {
-			eventViewPID = 25
-		}
-	}
-	tx_cal_controller {
 		pidList = 28
 		emailAddress = newsletter@oekumene-tiergarten.de
 		emailName = newsletter@oekumene-tiergarten.de
@@ -232,9 +220,8 @@ plugin {
 			}
 			dateFormat = %d.%m
 			timeFormat = %H:%M
-			location.showMap = 1
 			ics.eventUidPrefix = www.oekumene-tiergarten.de
-			create_event.freeAndBusyViewPid = 25
+			create_event.freeAndBusyViewPid =
 			event {
 				notify.subscriptionViewPid = 25
 				meeting.statusViewPid = 25
@@ -271,6 +258,9 @@ styles {
 		}
 	}
 }
+
+plugin.tx_cal_controller.view.create_event.freeAndBusyViewPid = 25
+plugin.tx_cal_controller.pidList = 28,27
 
 
 
