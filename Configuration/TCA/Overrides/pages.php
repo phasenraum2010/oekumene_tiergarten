@@ -25,6 +25,5 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/newsletter',
             'Oekumene Tiergarten Newsletter'
         );
-
     }
 );

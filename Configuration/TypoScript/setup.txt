@@ -75,6 +75,9 @@ plugin {
 	tx_indexedsearch {
 		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/indexed_search.html
 	}
+	tx_cal_controller {
+
+	}
 	tx_oekumene_tiergarten {
 		settings {
 			ttAdressPageId = {$plugin.tx_oekumene_tiergarten.settings.ttAdressPageId}
@@ -170,9 +173,30 @@ tt_content {
 #plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
 
 
-
-
-
+plugin.tx_cal_controller.subscribeFeUser = 1
+plugin.tx_cal_controller.subscribeWithCaptcha = 1
+plugin.tx_cal_controller.dateConfig.splitSymbol = .
+plugin.tx_cal_controller.dateConfig.dayPosition = 0
+plugin.tx_cal_controller.dateConfig.yearPosition = 2
+plugin.tx_cal_controller.rights.allowedUsers = 1
+plugin.tx_cal_controller.rights.allowedGroups = 1
+plugin.tx_cal_controller.activateFluid = 1
+plugin.tx_cal_controller.view.event.eventViewPid = 28
+plugin.tx_cal_controller.view.event.createEventViewPid = 28
+plugin.tx_cal_controller.view.event.editEventViewPid = 25
+plugin.tx_cal_controller.view.event.createEventViewPid = 25
+plugin.tx_cal_controller.view.event.eventViewPid = 25
+plugin.tx_cal_controller.view.event.deleteEventViewPid = 25
+plugin.tx_cal_controller.view.year.yearViewPid = 25
+plugin.tx_cal_controller.view.month.monthViewPid = 25
+plugin.tx_cal_controller.view.week.weekViewPid = 25
+plugin.tx_cal_controller.view.allowedViews = month,day,week,year,list,event,search_all,search_event,search_location,search_organizer,organizer,location,admin,create_event,confirm_event,save_event,edit_event,delete_event,remove_event,create_location,confirm_location,save_location,edit_loaction,delete_location,remove_location,create_organizer,confirm_organizer,save_organizer,edit_organizer,delete_organizer,remove_organizer
+plugin.tx_cal_controller.view.day.dayViewPid = 25
+plugin.tx_cal_controller.view.organizer.organizerViewPid = 25
+plugin.tx_cal_controller.view.organizer.createOrganizerViewPid = 25
+plugin.tx_cal_controller.view.organizer.editOrganizerViewPid = 25
+plugin.tx_cal_controller.view.organizer.deleteOrganizerViewPid = 25
+plugin.tx_cal_controller.view.location.locationViewPid = 25
 
 
 

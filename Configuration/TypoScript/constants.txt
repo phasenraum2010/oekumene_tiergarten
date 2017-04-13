@@ -121,28 +121,6 @@ plugin {
 			}
 		}
 	}
-	tx_cal_controller {
-		rights {
-			edit = 1
-			admin {
-				user = 1
-				group = 1
-			}
-			defaultSavePid = 28
-		}
-		pidList = 28
-		view {
-			location {
-				showMap = 1
-			}
-			dateFormat = %d.%m
-			timeFormat = %H:%M
-		}
-		rss {
-			eventViewPID = 25
-			xmlLang = de
-		}
-	}
 	tx_news {
 		view {
 			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Templates
@@ -171,7 +149,6 @@ plugin {
 			category =
 			generator = TYPO3 EXT:news
 		}
-
 		opengraph {
 			site_name = Der Ökumenische Arbeitskreis Tiergarten
 
@@ -224,9 +201,55 @@ plugin {
 			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/Layouts
 		}
 	}
+	tx_cal_controller {
+
+		rights {
+
+		}
+		view {
+
+		}
+		rss {
+			eventViewPID = 25
+		}
+	}
+	tx_cal_controller {
+		pidList = 28
+		emailAddress = newsletter@oekumene-tiergarten.de
+		emailName = newsletter@oekumene-tiergarten.de
+		emailOrganisation = Der Ökumenische Arbeitskreis Tiergarten
+		rights {
+			defaultSavePid = 28
+			edit = 1
+			admin {
+				user = 1
+				group = 1
+			}
+		}
+		view {
+			location {
+				showMap = 1
+			}
+			dateFormat = %d.%m
+			timeFormat = %H:%M
+			location.showMap = 1
+			ics.eventUidPrefix = www.oekumene-tiergarten.de
+			create_event.freeAndBusyViewPid = 25
+			event {
+				notify.subscriptionViewPid = 25
+				meeting.statusViewPid = 25
+			}
+		}
+		rss {
+			eventViewPID = 25
+			xmlLimit = 50
+			xmlLang = de
+			xmlTitle = oekumene-tiergarten.de: Termine
+			xmlDesc = Termine Ökumene Berlin Tiergarten
+			range = 365
+		}
+	}
 }
-
-
 
 # see plugin.t3sbootstrap_configuration.styles
 styles {
