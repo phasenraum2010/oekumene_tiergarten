@@ -36,6 +36,8 @@ plugin {
 			txNewsDataPageId = 22
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Contact Data:
 			powermailDataPageId = 21
+			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Contact Plugin:
+			powermailPluginPageId = 19
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Newsletter Folder:
 			directMailFolderPageId = 31
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Newsletter Folder:
@@ -179,7 +181,7 @@ plugin {
 	metaseo {
 		metaTags {
 			description = Ein Gemeinschaftsprojekt evangelischer und katholischer Gemeinden in Berlin Tiergarten
-			copyright = %YEAR% Der Ökumenische Arbeitskreis Tiergarten und Evangeiische Kirchengemeinde Tiergarten
+			copyright = %YEAR% Der Ökumenische Arbeitskreis Tiergarten und Evangelische Kirchengemeinde Tiergarten
 			author = Thomas Wöhlke
 			publisher = Evangeiische Kirchengemeinde Tiergarten
 			revisit = 0
@@ -217,8 +219,6 @@ plugin {
 }
 
 
-
-
 # see plugin.t3sbootstrap_configuration.styles
 styles {
 	content {
@@ -226,6 +226,10 @@ styles {
 			linkWrap {
 				lightboxEnabled = 1
 			}
+		}
+		links {
+			extTarget = _blank
+			target = _top
 		}
 		loginform {
 			pid = 27
@@ -249,12 +253,6 @@ plugin.tx_cal_controller {
 	rights {
 		defaultSavePid = 28
 		edit = 1
-		/*
-		admin {
-			user = 1
-			group = 1
-		}
-		*/
 	}
 	view {
 		location {
@@ -263,7 +261,6 @@ plugin.tx_cal_controller {
 		dateFormat = %d.%m
 		timeFormat = %H:%M
 		ics.eventUidPrefix = www.oekumene-tiergarten.de
-		#create_event.freeAndBusyViewPid = 25
 		event {
 			notify.subscriptionViewPid = 25
 			meeting.statusViewPid = 25

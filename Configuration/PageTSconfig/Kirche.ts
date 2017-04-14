@@ -16,7 +16,6 @@ mod.wizards.newContentElement.wizardItems.common {
 	show := addToList(kirche)
 }
 
-
 RTE.default.contentCSS >
 RTE.default.contentCSS = typo3conf/ext/oekumene_tiergarten/Resources/Public/css/rte.css
 RTE.classes {

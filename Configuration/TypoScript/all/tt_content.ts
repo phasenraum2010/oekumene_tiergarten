@@ -26,3 +26,11 @@ tt_content {
 		}
 	}
 }
+
+styles {
+	content {
+		loginform {
+			pid = {$plugin.tx_oekumene_tiergarten.settings.feUserLoginDataPageId}
+		}
+	}
+}

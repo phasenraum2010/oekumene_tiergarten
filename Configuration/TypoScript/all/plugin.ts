@@ -7,6 +7,7 @@ plugin {
 			calenderPluginPageId = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
 			txNewsDataPageId = {$plugin.tx_oekumene_tiergarten.settings.txNewsDataPageId}
 			powermailDataPageId = {$plugin.tx_oekumene_tiergarten.settings.powermailDataPageId}
+			powermailPluginPageId = {$plugin.tx_oekumene_tiergarten.settings.powermailPluginPageId}
 			directMailFolderPageId = {$plugin.tx_oekumene_tiergarten.settings.directMailFolderPageId}
 			directMailSubscriptionPageId = {$plugin.tx_oekumene_tiergarten.settings.directMailSubscriptionPageId}
 		}
@@ -69,10 +70,10 @@ plugin {
 		color3.wrap = {$plugin.feadmin.dmailsubscription.color3}
 	}
 	tx_indexedsearch {
-		#templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/indexed_search.html
 		templateFile = {$plugin.tx_indexedsearch.templateFile}
 
 	}
+	/*
 	tx_cal_controller {
 		#subscribeFeUser = 1
 		activateFluid = 1
@@ -91,21 +92,59 @@ plugin {
 				deleteEventViewPid = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
 				event {
 					defaultEventLength = 3600
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
 				}
 			}
-			#rights {
-				#allowedUsers = 1
-				#allowedGroups = 1
-			#}
 			day {
 				dayViewPid = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
 			}
 			week {
 				weekViewPid = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
 			}
 			month {
 				monthViewPid = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
 				showListInMonthView = 1
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
 			}
 			year {
 				yearViewPid = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
@@ -133,8 +172,158 @@ plugin {
 				editOrganizerViewPid = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
 				deleteOrganizerViewPid = {$plugin.tx_oekumene_tiergarten.settings.calenderPluginPageId}
 			}
+			list {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			subscription {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			ics {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			single_ics {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			freeAndBusy {
+				enable = 0
+			}
+			search_event {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			create_event {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			edit_event {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			confirm_event {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
+			create_location {
+
+			}
+			edit_location {
+
+			}
+			confirm_location{
+
+			}
+			delete_location{
+
+			}
+			create_organizer {
+
+			}
+			edit_organizer {
+
+			}
+			confirm_organizer{
+
+			}
+			delete_organizer {
+
+			}
+			translation {
+
+			}
+		}
+		lib {
+			list {
+				event {
+					attachment =< tt_content.uploads
+					attachment {
+						dataProcessing.10.references >
+						dataProcessing.10.references {
+							table = tx_cal_event
+							uid.data = field:uid
+							fieldName = attachment
+						}
+					}
+				}
+			}
 		}
 	}
+	*/
 }
 
 
