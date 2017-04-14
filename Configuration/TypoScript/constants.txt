@@ -27,7 +27,7 @@ plugin {
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Adressen der Gemeinden:
 			ttAdressPageId = 36
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id FE User:
-			feUserLoginDataPageId = 27
+			feUserLoginDataPageId = 28
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Calender Data:
 			calenderDataPageId = 28
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Calender Plugin:
@@ -227,14 +227,8 @@ styles {
 				lightboxEnabled = 1
 			}
 		}
-		/*
-		links {
-			extTarget = _blank
-			target = _top
-		}
-		*/
 		loginform {
-			pid = 27
+			pid = 28
 			templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/felogin/FrontendLogin.html
 		}
 		allowTags = iframe, a, abbr, acronym, address, article, aside, b, bdo, big, blockquote, br, caption, center, cite, code, col, colgroup, dd, del, dfn, dl, div, dt, em, font, footer, header, h1, h2, h3, h4, h5, h6, hr, i, img, ins, kbd, label, li, link, meta, nav, ol, p, pre, q, samp, sdfield, section, small, span, strike, strong, style, sub, sup, table, thead, tbody, tfoot, td, th, tr, title, tt, u, ul, var
@@ -246,42 +240,33 @@ styles {
 	}
 }
 
-/*
-plugin.tx_cal_controller {
-	#pidList = 28
-	emailAddress = newsletter@oekumene-tiergarten.de
-	emailName = newsletter@oekumene-tiergarten.de
-	emailOrganisation = Der Ökumenische Arbeitskreis Tiergarten
-	#rights {
-		#defaultSavePid = 28
-		#edit = 1
-	#}
-	view {
-		location {
-			showMap = 1
-		}
-		dateFormat = %d.%m
-		timeFormat = %H:%M
-		ics.eventUidPrefix = www.oekumene-tiergarten.de
-		#event {
-		#	notify.subscriptionViewPid = 25
-		#	meeting.statusViewPid = 25
-		#}
-	}
-	rss {
-		#eventViewPID = 25
-		xmlLimit = 50
-		xmlLang = de
-		xmlTitle = oekumene-tiergarten.de: Termine
-		xmlDesc = Termine Ökumene Berlin Tiergarten
-		range = 365
-	}
-}
-*/
+
+plugin.tx_cal_controller.view.dateFormat = %d.%m
+plugin.tx_cal_controller.view.timeFormat = %H:%M
+plugin.tx_cal_controller.rights.edit = 1
+plugin.tx_cal_controller.rights.admin.user = 1
+plugin.tx_cal_controller.emailAddress = newsletter@oekumene-tiergarten.de
+plugin.tx_cal_controller.emailName = Thomas Woehlke
+plugin.tx_cal_controller.emailOrganisation = Der Ökumenische Arbeitskreis Tiergarten
+plugin.tx_cal_controller.view.event.notify.subscriptionViewPid = 25
+plugin.tx_cal_controller.view.event.meeting.statusViewPid = 25
+plugin.tx_cal_controller.view.location.showMap = 1
+plugin.tx_cal_controller.view.event.remind = 0
+plugin.tx_cal_controller.rights.defaultSavePid = 25
+plugin.tx_cal_controller.pidList = 28
+plugin.tx_cal_controller.rss.eventViewPID = 25
+plugin.tx_cal_controller.rss.xmlLang = de
+plugin.tx_cal_controller.rss.range = 400
 
 
-
-
+plugin.tx_femanager.settings.adminName = Thomas Woehlke | Web-Admin
+plugin.tx_femanager.settings.adminEmail = thomas.woehlke@oekumene-tiergarten.de
+plugin.tx_femanager.persistence.storagePid = 28
+plugin.tx_evangtermine.persistence.storagePid = 39
+plugin.tx_web2pdf.settings.pdfStyleSheet = print
+plugin.tx_web2pdf.settings.pdfDestination = attachment
+plugin.tx_pbsocial.persistence.storagePid = 22
+fl_realurl_image.conf_crop = 210
 
 
 
