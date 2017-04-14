@@ -8,11 +8,6 @@ page {
 		file1 = EXT:oekumene_tiergarten/Resources/Public/Contrib/map-icons/js/map-icons.min.js
 		file2 = EXT:oekumene_tiergarten/Resources/Public/js/my.js
 	}
-	config {
-		index_enable = 1
-		# Wenn gesetzt, werden externe Medien, auf die auf Seiten verlinkt wird, ebenfalls indiziert.
-		index_externals = 1
-	}
 	10 {
 		templateRootPaths {
 			310 = {$plugin.tx_oekumene_tiergarten.view.templateRootPath}
@@ -27,4 +22,19 @@ page {
 			300 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
 		}
 	}
+}
+
+page.config {
+	headerComment (
+--------------------------------------------------
+|                                                |
+|  TYPO3 Website - Development by               |
+|                                                |
+|  Thomas Woehlke | 2017 | www.thomas-woehlke.de |
+|                                                |
+--------------------------------------------------
+	)
+	index_enable = 1
+	# Wenn gesetzt, werden externe Medien, auf die auf Seiten verlinkt wird, ebenfalls indiziert.
+	index_externals = 1
 }

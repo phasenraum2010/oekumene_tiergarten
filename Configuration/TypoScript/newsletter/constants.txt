@@ -12,3 +12,6 @@ plugin {
 		siteUrl = http://oekumene-tiergarten-test.thomas-woehlke.de
 	}
 }
+
+stylesheet = EXT:oekumene_tiergarten/Resources/Public/css/direct_mail.css
+
