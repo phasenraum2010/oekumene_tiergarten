@@ -1,7 +1,3 @@
-#-------------------------------------------------------------------------------
-#	Plugin Setup
-#-------------------------------------------------------------------------------
-
 config {
 	prefixLocalAnchors = all
 	absRelPath = /
@@ -12,210 +8,24 @@ config {
 	spamProtectEmailAddresses_atSubst = (at)
 }
 
-plugin {
-	tx_felogin_pi1 {
-		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/felogin/FrontendLogin.html
-		email_from = newsletter@oekumene-tiergarten.de
-		email_fromName = Thomas Wöhlke
-		replyTo = newsletter@oekumene-tiergarten.de
-		_CSS_DEFAULT_STYLE >
-	}
-	tx_indexedsearch {
-		_CSS_DEFAULT_STYLE >
-		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/indexed_search.html
-	}
-	tx_powermail {
-		view {
-			templateRootPaths {
-				300 = EXT:oekumene_tiergarten/Resources/Private/Extensions/powermail/Templates/
-			}
-			partialRootPaths {
-				300 = EXT:oekumene_tiergarten/Resources/Private/Extensions/powermail/Partials/
-			}
-			layoutRootPaths {
-				300 = EXT:oekumene_tiergarten/Resources/Private/Extensions/powermail/Layouts/
-			}
-		}
-	}
-	tx_news {
-		view {
-			templateRootPaths {
-				10 = {$plugin.tx_news.view.twb.templateRootPath}
-			}
-			partialRootPaths {
-				10 = {$plugin.tx_news.view.twb.partialRootPath}
-			}
-			layoutRootPaths {
-				10 = {$plugin.tx_news.view.twb.layoutRootPath}
-			}
-		}
-		settings {
-			facebookLocale = de_DE
-			googlePlusLocale = de
-			disqusLocale = de
-			list.media.dummyImage = typo3conf/ext/oekumene_tiergarten/Resources/Public/Images/logo_oekumene.jpg
-		}
-	}
-	feadmin.dmailsubscription {
-		templateFile ={$plugin.feadmin.dmailsubscription.file.templateFile}
-		cObjects {
-			CATLIST {
-				templateFile = {$plugin.feadmin.dmailsubscription.file.templateFile}
-				pid = {$plugin.feadmin.dmailsubscription.pid}
-			}
-		}
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/plugin.ts">
 
-		# Global wraps
-		wrap1.wrap = {$plugin.feadmin.dmailsubscription.wrap1}
-		wrap2.wrap = {$plugin.feadmin.dmailsubscription.wrap2}
-		color1.wrap = {$plugin.feadmin.dmailsubscription.color1}
-		color2.wrap = {$plugin.feadmin.dmailsubscription.color2}
-		color3.wrap = {$plugin.feadmin.dmailsubscription.color3}
-	}
-	tx_indexedsearch {
-		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/indexed_search.html
-	}
-	#tx_cal_controller {
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/page.ts">
 
-	#}
-	tx_oekumene_tiergarten {
-		settings {
-			ttAdressPageId = {$plugin.tx_oekumene_tiergarten.settings.ttAdressPageId}
-		}
-	}
-}
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/rte.ts">
 
-page {
-	includeCSS {
-		file1 = https://fonts.googleapis.com/css?family=Titillium+Web
-		file2 = EXT:oekumene_tiergarten/Resources/Public/Contrib/map-icons/css/map-icons.min.css
-		file3 = EXT:oekumene_tiergarten/Resources/Public/css/my.css
-	}
-	includeJS {
-		file1 = EXT:oekumene_tiergarten/Resources/Public/Contrib/map-icons/js/map-icons.min.js
-		file2 = EXT:oekumene_tiergarten/Resources/Public/js/my.js
-	}
-	config {
-		index_enable = 1
-		# Wenn gesetzt, werden externe Medien, auf die auf Seiten verlinkt wird, ebenfalls indiziert.
-		index_externals = 1
-	}
-	10 {
-		templateRootPaths {
-			310 = {$plugin.tx_oekumene_tiergarten.view.templateRootPath}
-			305 = EXT:oekumene_tiergarten/Resources/Private/Templates/
-		}
-		partialRootPaths {
-			310 = {$plugin.tx_oekumene_tiergarten.view.partialRootPath}
-			300 = EXT:oekumene_tiergarten/Resources/Private/Partials/
-		}
-		layoutRootPaths {
-			310 = {$plugin.tx_oekumene_tiergarten.view.layoutRootPath}
-			300 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
-		}
-	}
-}
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/fsc.ts">
 
-lib {
-	parseFunc_RTE {
-		allowTags := addToList(object,param,embed,iframe)
-	}
-	fluidContent {
-		templateRootPaths {
-			310 = {$plugin.tx_oekumene_tiergarten.view.content.templateRootPath}
-			300 = EXT:oekumene_tiergarten/Resources/Private/Templates/Content/
-		}
-		partialRootPaths {
-			310 = {$plugin.tx_oekumene_tiergarten.view.partialRootPath}
-			300 = EXT:oekumene_tiergarten/Resources/Private/Partials/
-		}
-		layoutRootPaths {
-			310 = {$plugin.tx_oekumene_tiergarten.view.content.layoutRootPath}
-			300 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
-		}
-	}
-}
-
-
-tt_content {
-	kirche < lib.fluidContent
-	kirche {
-		templateName = Kirche
-		dataProcessing {
-			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-			10 {
-				references.fieldName = assets
-			}
-			20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
-			20 {
-				maxGalleryWidth = {$styles.content.textmedia.maxW}
-				maxGalleryWidthInText = {$styles.content.textmedia.maxWInText}
-				columnSpacing = {$styles.content.textmedia.columnSpacing}
-				borderWidth = {$styles.content.textmedia.borderWidth}
-				borderPadding = {$styles.content.textmedia.borderPadding}
-			}
-			30 = ThomasWoehlke\OekumeneTiergarten\DataProcessing\ChurchProcessor
-		}
-		stdWrap {
-			# Setup the edit icon for content element "textmedia"
-			editIcons = tt_content: header [header_layout], bodytext, assets [imageorient|imagewidth|imageheight], [imagecols|imageborder], image_zoom
-			editIcons {
-				iconTitle.data = LLL:EXT:fluid_styled_content/Resources/Private/Language/FrontendEditing.xlf:editIcon.textmedia
-			}
-		}
-	}
-}
-
-#plugin.tx_felogin_pi1.templateFile = EXT:oekumene_tiergarten/Resources/Private/Templates/FrontendLogin.html
-#plugin.tx_felogin_pi1.email_from = newsletter@oekumene-tiergarten.de
-#plugin.tx_felogin_pi1.email_fromName = Thomas Wöhlke
-#plugin.tx_felogin_pi1.replyTo = newsletter@oekumene-tiergarten.de
-#plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE >
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/tt_content.ts">
 
 
 
 
-plugin.tx_cal_controller.subscribeFeUser = 1
-plugin.tx_cal_controller.subscribeWithCaptcha = 1
-plugin.tx_cal_controller.dateConfig.splitSymbol = .
-plugin.tx_cal_controller.dateConfig.dayPosition = 0
-plugin.tx_cal_controller.dateConfig.yearPosition = 2
-plugin.tx_cal_controller.rights.allowedUsers = 1
-plugin.tx_cal_controller.rights.allowedGroups = 1
-plugin.tx_cal_controller.activateFluid = 1
-plugin.tx_cal_controller.view.event.eventViewPid = 28
-plugin.tx_cal_controller.view.event.createEventViewPid = 28
-plugin.tx_cal_controller.view.event.editEventViewPid = 25
-plugin.tx_cal_controller.view.event.createEventViewPid = 25
-plugin.tx_cal_controller.view.event.eventViewPid = 25
-plugin.tx_cal_controller.view.event.deleteEventViewPid = 25
-plugin.tx_cal_controller.view.year.yearViewPid = 25
-plugin.tx_cal_controller.view.month.monthViewPid = 25
-plugin.tx_cal_controller.view.week.weekViewPid = 25
-plugin.tx_cal_controller.view.allowedViews = month,day,week,year,list,event,search_all,search_event,search_location,search_organizer,organizer,location,admin,create_event,confirm_event,save_event,edit_event,delete_event,remove_event,create_location,confirm_location,save_location,edit_loaction,delete_location,remove_location,create_organizer,confirm_organizer,save_organizer,edit_organizer,delete_organizer,remove_organizer
-plugin.tx_cal_controller.view.day.dayViewPid = 25
-plugin.tx_cal_controller.view.organizer.organizerViewPid = 25
-plugin.tx_cal_controller.view.organizer.createOrganizerViewPid = 25
-plugin.tx_cal_controller.view.organizer.editOrganizerViewPid = 25
-plugin.tx_cal_controller.view.organizer.deleteOrganizerViewPid = 25
-plugin.tx_cal_controller.view.location.locationViewPid = 25
-plugin.tx_cal_controller.view.event.event.defaultEventLength = 3600
-plugin.tx_cal_controller.view.location.createLocationViewPid = 25
-plugin.tx_cal_controller.view.location.editLocationViewPid = 25
-plugin.tx_cal_controller.view.location.deleteLocationViewPid = 25
 
-plugin.tx_cal_controller.view.year.event {
-	attachment =< tt_content.uploads
-	attachment {
-		dataProcessing.10.references >
-		dataProcessing.10.references {
-			table = tx_cal_event
-			uid.data = field:uid
-			fieldName = attachment
-		}
-	}
-}
 
-plugin.tx_cal_controller.view.month.showListInMonthView = 1
+
+
+
+
 
 
