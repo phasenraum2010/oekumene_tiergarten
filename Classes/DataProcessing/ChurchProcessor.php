@@ -34,6 +34,8 @@ class ChurchProcessor implements DataProcessorInterface
         array $processedData
     )
     {
+        $googleMapsApiBrowserKey = $processedData['settings']['googleMapsApiBrowserKey'];
+
         $ttAddressPageId = $processedData['data']['tt_address_uid'];
 
         /** @var $extbaseObjectManager \TYPO3\CMS\Extbase\Object\ObjectManager */
@@ -82,7 +84,6 @@ class ChurchProcessor implements DataProcessorInterface
         $state= $ttAddress->getRegion();
         $country = $ttAddress->getCountry();
         $processedData['data']['tx_kirche_street_address']=$street.', '.$zip.' '.$city;
-        $key=NULL;
         $width='320';
         $height='200';
         $lat='52.5296163';
@@ -90,7 +91,7 @@ class ChurchProcessor implements DataProcessorInterface
         $zoom='15';
         $mapName=$processedData['data']['header'];
         $subheader=$processedData['data']['subheader'];
-        $map = new Map($key, $width, $height,$lat, $long, $zoom, $mapName);
+        $map = new Map($googleMapsApiBrowserKey, $width, $height,$lat, $long, $zoom, $mapName);
         $tabLabels = [$mapName];
         $title=[ '<b>'.$mapName.'</b>' ];
         $desc='<br/>'.$subheader.'<br/>'.$street.'<br/>' .$zip.' '.$city.'<br/><br/>';

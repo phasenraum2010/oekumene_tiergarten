@@ -10,6 +10,7 @@ plugin {
 			powermailPluginPageId = {$plugin.tx_oekumene_tiergarten.settings.powermailPluginPageId}
 			directMailFolderPageId = {$plugin.tx_oekumene_tiergarten.settings.directMailFolderPageId}
 			directMailSubscriptionPageId = {$plugin.tx_oekumene_tiergarten.settings.directMailSubscriptionPageId}
+			googleMapsApiBrowserKey =  {$plugin.tx_oekumene_tiergarten.settings.googleMapsApiBrowserKey}
 		}
 	}
 	tx_felogin_pi1 {

@@ -42,6 +42,8 @@ plugin {
 			directMailFolderPageId = 31
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Newsletter Folder:
 			directMailSubscriptionPageId = 33
+			# cat=plugin.tx_oekumene_tiergarten/linke; type=string; label=Gogle Maos API Browser Key
+			googleMapsApiBrowserKey = AIzaSyCyH8ABZvQ3YYM2EjVfFaGx0xRbUj8E694
 		}
 	}
 	t3sbootstrap_configuration {
