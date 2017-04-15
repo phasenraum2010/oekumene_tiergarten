@@ -139,8 +139,16 @@ i.tx-kirche-icon-facebook.fa.fa-facebook-official {
 .news-single .extra .fa,
 .news-single .extra .map-icon {
 	width: 20px;
-	/* line-height: 26px; */
 	margin-right: 1px;
+}
+
+.tx-kirche-cal .glyphicon,
+.tx-kirche-cal .fa,
+.tx-kirche-cal .map-icon,
+#calendar-event-backlink .fa {
+	width: 24px;
+	margin-right: 1px;
+	display: inline-block;
 }
 
 .news-single .extra {
@@ -185,6 +193,16 @@ div.fsc-default.kirche div#gmap div.tx-wecmap-map div div.gm-style div._ibani_99
 	height: 246px !important;
 }
 
+.tx-kirche-cal div.tx-kirche-cal-description,
+.tx-kirche-cal div.tx-kirche-cal-map {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.tx-kirche-cal .tx-kirche-cal-location-name,
+.tx-kirche-cal .tx-kirche-cal-organizer-name {
+	margin-left: 8px;
+}
 
 
 
