@@ -40,22 +40,44 @@ value = HelloWorld<br/>
 
 <!--###TEMPLATE_PHPICALENDAR_EVENT### begin -->
 <!--phpicalendar_event.tmpl-->
-<h1>###HEADING###</h1>
+<!-- <h1>###HEADING###</h1> -->
 ###EDIT_LINK###
 
 ###TITLE###
+<div class="tx-kirche-cal-event-datetime">
+<i class="fa fa-calendar"></i>
 ###STARTDATE###
+###STARTTIME###  bis
 ###ENDDATE###
-###STARTTIME###
 ###ENDTIME###
+</div>
+<div class="tx-kirche-cal-event-status">
 ###STATUS### ###PRIORITY### ###COMPLETED###
+</div>
+<div class="tx-kirche-cal-event-organizer">
 ###ORGANIZER###
+</div>
+<div class="tx-kirche-cal-event-location-organizer">
 ###LOCATION###
+</div>
+<div class="tx-kirche-cal-event-description">
 ###DESCRIPTION###
+</div>
+<!--
+<div class="tx-kirche-cal-event-ext-url">
+<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
 ###EXT_URL###
+</div>
+-->
+<div class="tx-kirche-cal-event-inmage">
 ###IMAGE###
+</div>
+<div class="tx-kirche-cal-event-attachment">
 ###ATTACHMENT###
+</div>
+<div class="tx-kirche-cal-event-attaendee">
 ###ATTENDEE###
+</div>
 <!--
 <!-- ###ICS_LINK### start --><img src="###IMG_PATH###/ics.gif" border="0"/><!-- ###ICS_LINK### end -->
 -->
