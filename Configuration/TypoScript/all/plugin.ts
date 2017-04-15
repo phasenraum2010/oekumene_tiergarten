@@ -13,6 +13,7 @@ plugin {
 			googleMapsApiBrowserKey =  {$plugin.tx_oekumene_tiergarten.settings.googleMapsApiBrowserKey}
 		}
 	}
+	/*
 	tx_felogin_pi1 {
 		templateFile = {$plugin.tx_felogin_pi1.templateFile}
 		email_from = newsletter@oekumene-tiergarten.de
@@ -20,6 +21,7 @@ plugin {
 		replyTo = newsletter@oekumene-tiergarten.de
 		_CSS_DEFAULT_STYLE >
 	}
+	*/
 	tx_indexedsearch {
 		_CSS_DEFAULT_STYLE >
 	}

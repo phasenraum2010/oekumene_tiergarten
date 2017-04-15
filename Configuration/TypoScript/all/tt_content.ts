@@ -39,6 +39,7 @@ tt_content {
 	}
 }
 
+/*
 styles {
 	content {
 		loginform {
@@ -46,3 +47,4 @@ styles {
 		}
 	}
 }
+*/
