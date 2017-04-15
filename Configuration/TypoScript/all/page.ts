@@ -4,11 +4,11 @@ page {
 		cssFileMapIcons = EXT:oekumene_tiergarten/Resources/Public/Contrib/map-icons/css/map-icons.min.css
 		cssFileMyOwn = EXT:oekumene_tiergarten/Resources/Public/css/my.css
 	}
-	includeJS {
+	includeJSFooter {
 		/*
-		jsFileWecMapInfoBubble = EXT:oekumene_tiergarten/Resources/Public/Contrib/wec-map/infobubble.js
-		jsFileWecMapNarkerManager = EXT:oekumene_tiergarten/Resources/Public/Contrib/wec-map/markermanager.js
-		jsFileWecMapOms = EXT:oekumene_tiergarten/Resources/Public/Contrib/wec-map/oms.min.js
+		jsFileWecMapInfoBubble = EXT:wec_map/Resources/Public/JavaScript/ContribJS/infobubble.js
+		jsFileWecMapNarkerManager = EXT:wec_map/Resources/Public/JavaScript/ContribJS/markermanager.js
+		jsFileWecMapOms = EXT:wec_map/Resources/Public/JavaScript/ContribJS/oms.min.js
 		jsFileWecMapCopyrights = EXT:wec_map/Resources/Public/JavaScript/copyrights.js
 		jsFileWecMapWecMap = EXT:wec_map/Resources/Public/JavaScript/wecmap.js
 		*/

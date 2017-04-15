@@ -34,6 +34,8 @@ class ChurchProcessor implements DataProcessorInterface
         array $processedData
     )
     {
+
+        //$googleMapsApiBrowserKey = NULL;
         $googleMapsApiBrowserKey = $processedData['settings']['googleMapsApiBrowserKey'];
 
         $ttAddressPageId = $processedData['data']['tt_address_uid'];
@@ -84,30 +86,36 @@ class ChurchProcessor implements DataProcessorInterface
         $state= $ttAddress->getRegion();
         $country = $ttAddress->getCountry();
         $processedData['data']['tx_kirche_street_address']=$street.', '.$zip.' '.$city;
-        $width='320';
-        $height='200';
+        $width='640';
+        $height='400';
         $lat='52.5296163';
         $long='13.3317411';
         $zoom='15';
         $mapName=$processedData['data']['header'];
         $subheader=$processedData['data']['subheader'];
         $map = new Map($googleMapsApiBrowserKey, $width, $height,$lat, $long, $zoom, $mapName);
-        $tabLabels = [$mapName];
-        $title=[ '<b>'.$mapName.'</b>' ];
-        $desc='<br/>'.$subheader.'<br/>'.$street.'<br/>' .$zip.' '.$city.'<br/><br/>';
+        //$tabLabels = [$mapName];
+        $tabLabels = [];
+        $title=[ '<h4>'.$mapName.'</h4>' ];
+        $desc='<h5>'.$subheader.'</h5><p>'.$street.'<br/>' .$zip.' '.$city.'</p>';
         $description=[$desc];
         $map->addMarkerByAddressWithTabs($street, $city, $state, $zip, $country,$tabLabels,$title,$description);
         $map->setCenterByAddress($street, $city, $state, $zip, $country);
         $map->addOption('enableOverlappingMarkerManager',true);
+        $map->addControl('largeMap');
         $map->addControl('scale');
-        $map->addControl('zoom');
+        $map->addControl('overviewMap');
         $map->addControl('mapType');
+        $map->addControl('zoom');
         $map->setType('G_NORMAL_MAP');
         $map->addControl('googleEarth');
-        $map->enableDirections();
+        //$divID = 'tx-kirche-map-directions';
+        //$map->enableDirections(true, $divID);
         $map->showInfoOnLoad();
         $map->autoCenterAndZoom();
+        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($map);
         $html = $map->drawMap();
+        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($html);
         $processedData['data']['tx_kirche_map'] = $html;
         return $processedData;
     }

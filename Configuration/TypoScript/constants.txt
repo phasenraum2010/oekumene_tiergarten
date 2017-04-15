@@ -245,20 +245,20 @@ styles {
 
 plugin.tx_cal_controller.view.dateFormat = %d.%m
 plugin.tx_cal_controller.view.timeFormat = %H:%M
-plugin.tx_cal_controller.rights.edit = 1
-plugin.tx_cal_controller.rights.admin.user = 1
+//plugin.tx_cal_controller.rights.edit = 1
+//plugin.tx_cal_controller.rights.admin.user = 1
 plugin.tx_cal_controller.emailAddress = newsletter@oekumene-tiergarten.de
 plugin.tx_cal_controller.emailName = Thomas Woehlke
 plugin.tx_cal_controller.emailOrganisation = Der Ökumenische Arbeitskreis Tiergarten
-plugin.tx_cal_controller.view.event.notify.subscriptionViewPid = 25
+//plugin.tx_cal_controller.view.event.notify.subscriptionViewPid = 25
 plugin.tx_cal_controller.view.event.meeting.statusViewPid = 25
 plugin.tx_cal_controller.view.location.showMap = 1
-plugin.tx_cal_controller.view.event.remind = 0
-plugin.tx_cal_controller.rights.defaultSavePid = 25
+//plugin.tx_cal_controller.view.event.remind = 0
+//plugin.tx_cal_controller.rights.defaultSavePid = 25
 plugin.tx_cal_controller.pidList = 28
-plugin.tx_cal_controller.rss.eventViewPID = 25
-plugin.tx_cal_controller.rss.xmlLang = de
-plugin.tx_cal_controller.rss.range = 400
+//plugin.tx_cal_controller.rss.eventViewPID = 25
+//plugin.tx_cal_controller.rss.xmlLang = de
+//plugin.tx_cal_controller.rss.range = 400
 
 
 plugin.tx_femanager.settings.adminName = Thomas Woehlke | Web-Admin
