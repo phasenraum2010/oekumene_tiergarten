@@ -170,7 +170,20 @@ span.tx-indexedsearch-percent {
 	float: right;
 }
 
-
+div.fsc-default.kirche div#gmap div.tx-wecmap-map div div.gm-style div._ibani_9981:nth-child(2) {
+	overflow: auto;
+	cursor: default;
+	clear: both;
+	position: relative;
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(204, 204, 204);
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	padding: 10px;
+	width: 246px;
+	height: 246px !important;
+}
 
 
 

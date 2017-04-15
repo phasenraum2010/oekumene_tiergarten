@@ -97,7 +97,7 @@ class ChurchProcessor implements DataProcessorInterface
         //$tabLabels = [$mapName];
         $tabLabels = [];
         $title=[ '<h4>'.$mapName.'</h4>' ];
-        $desc='<h5>'.$subheader.'</h5><p>'.$street.'<br/>' .$zip.' '.$city.'</p>';
+        $desc='<h5>'.$subheader.'</h5><p>'.$street.'<br/>' .$zip.' '.$city.'</p><br/>';
         $description=[$desc];
         $map->addMarkerByAddressWithTabs($street, $city, $state, $zip, $country,$tabLabels,$title,$description);
         $map->setCenterByAddress($street, $city, $state, $zip, $country);
