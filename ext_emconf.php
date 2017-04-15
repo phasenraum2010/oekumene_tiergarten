@@ -32,7 +32,7 @@ $EM_CONF[$_EXTKEY] = array(
             'felogin' => '7.6.0-7.6.99',
             'indexed_search' => '7.6.0-7.6.99',
             'fluid_styled_content' => '7.6.0-7.6.99',
-            'css_styled_content' => '7.6.0-7.6.99',
+            //'css_styled_content' => '7.6.0-7.6.99',
             'rtehtmlarea' => '7.0.0-7.6.99',
             'form' => '7.0.0-8.9.99',
             /* TER-Extensions: */
