@@ -102,12 +102,6 @@ plugin {
 			powermail {
 				formPid = 19
 			}
-			/*
-			login {
-				enable = 1
-				uid = 26
-			}
-			*/
 		}
 		styles {
 			jumbotron {
@@ -118,12 +112,6 @@ plugin {
 			}
 		}
 	}
-	/*
-	tx_felogin_pi1 {
-		_CSS_DEFAULT_STYLE >
-		templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/felogin/FrontendLogin.html
-	}
-	*/
 	tx_powermail {
 		settings {
 			main {
@@ -289,6 +277,13 @@ plugin.tx_cal_controller.view.week.weekTemplate = EXT:oekumene_tiergarten/Resour
 plugin.tx_cal_controller.view.year.yearTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/year.tmpl
 plugin.tx_cal_controller.view.dateFormat = %d.%m
 plugin.tx_cal_controller.view.timeFormat = %H:%M
+
+plugin.t3sbootstrap_configuration.styles.jumbotron.hidden.sm = 1
+plugin.metaseo.services.piwik.url = piwik.thomas-woehlke.de
+plugin.t3sbootstrap_configuration.navigation.navbar.mmenu = 1
+
+plugin.t3sbootstrap_configuration.styles.navbar.style.fixed.top = 1
+plugin.t3sbootstrap_configuration.styles.navbar.onTop = 1
 
 
 

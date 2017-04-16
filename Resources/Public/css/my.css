@@ -1,5 +1,7 @@
 /* my own CSS. (C) 2017 Der Oekumenische Arbeitskreis Tiergarten */
 
+@media all {
+
 body {
 	font-family: 'Titillium Web', sans-serif !important;
 	font-weight: 100 !important;
@@ -344,5 +346,26 @@ div.fsc-default.kirche div#gmap div.tx-wecmap-map div div.gm-style div._ibani_99
 .tx-cal-controller .month-large tr.days td {
 	padding-right: 4px;
 }
+
+}
+
+@media screen and (max-width: 767px) {
+	.navbar-nav .open .dropdown-menu {
+		background-color: #317eac !important;
+	}
+}
+
+/*
+@media (max-width: 767px) {
+	.navbar-nav li.dropdown.main.active.open .dropdown-menu li {
+		color: #555555 !important;
+	}
+	.navbar-nav li.dropdown.main.active.open .dropdown-menu li.active {
+		color: whitesmoke !important;
+	}
+}
+*/
+
+
 
 
