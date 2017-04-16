@@ -177,7 +177,7 @@ plugin {
 			description = Ein Gemeinschaftsprojekt evangelischer und katholischer Gemeinden in Berlin Tiergarten
 			copyright = %YEAR% Der Ökumenische Arbeitskreis Tiergarten und Evangelische Kirchengemeinde Tiergarten
 			author = Thomas Wöhlke
-			publisher = Evangeiische Kirchengemeinde Tiergarten
+			publisher = Evangelische Kirchengemeinde Tiergarten
 			revisit = 0
 			geoPositionLatitude = 52.5248355
 			geoPositionLongitude = 13.3470349
@@ -285,7 +285,13 @@ plugin.t3sbootstrap_configuration.navigation.navbar.mmenu = 1
 plugin.t3sbootstrap_configuration.styles.navbar.style.fixed.top = 1
 plugin.t3sbootstrap_configuration.styles.navbar.onTop = 1
 
-
+plugin.metaseo.sitemap.index.allowNoStaticCachable = 1
+plugin.metaseo.sitemap.index.allowNoCache = 1
+plugin.metaseo.sitemap.enablePriority = 0
+plugin.metaseo.pageTitle.applySitetitleToPrefixSuffix = 0
+plugin.metaseo.pageTitle.sitetitleGlueSpaceBefore = 1
+plugin.metaseo.pageTitle.sitetitlePosition = 1
+plugin.metaseo.pageTitle.sitetitleGlue = |
 
 
 
