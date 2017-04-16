@@ -249,7 +249,7 @@ styles {
 }
 
 
-plugin.tx_cal_controller.view.dateFormat = %d.%m.%y
+plugin.tx_cal_controller.view.dateFormat = %d.%m.%Y
 plugin.tx_cal_controller.view.timeFormat = %H:%M
 plugin.tx_cal_controller.emailAddress = newsletter@oekumene-tiergarten.de
 plugin.tx_cal_controller.emailName = Thomas Woehlke
@@ -267,6 +267,34 @@ plugin.tx_web2pdf.settings.pdfStyleSheet = print
 plugin.tx_web2pdf.settings.pdfDestination = attachment
 plugin.tx_pbsocial.persistence.storagePid = 22
 fl_realurl_image.conf_crop = 210
+
+plugin.tx_cal_controller.rights.admin.group = 1
+plugin.tx_cal_controller.rights.defaultSavePid = 28
+plugin.tx_cal_controller.view.event.eventModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/event_model.tmpl
+plugin.tx_cal_controller.view.event.eventTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/event.tmpl
+plugin.tx_cal_controller.view.location.locationModelTemplate4Address = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location_address_model.tmpl
+plugin.tx_cal_controller.view.location.locationModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location_model.tmpl
+plugin.tx_cal_controller.view.location.locationTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location.tmpl
+plugin.tx_cal_controller.module.locationloader.template = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/module_locationloader.tmpl
+plugin.tx_cal_controller.module.organizerloader.template = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/module_organizerloader.tmpl
+plugin.tx_cal_controller.view.month.monthSmallTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_small.tmpl
+plugin.tx_cal_controller.view.month.monthLargeTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_large.tmpl
+plugin.tx_cal_controller.view.month.monthTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month.tmpl
+plugin.tx_cal_controller.view.month.monthMediumTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_medium.tmpl
+plugin.tx_cal_controller.view.month.monthMiniTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/monthMini.tmpl
+plugin.tx_cal_controller.view.organizer.organizerModelTemplate4Address = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer_address_model.tmpl
+plugin.tx_cal_controller.view.organizer.organizerModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer_model.tmpl
+plugin.tx_cal_controller.view.organizer.organizerTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer.tmpl
+plugin.t3sbootstrap_configuration.styles.navbar.style.fixed.top = 0
+plugin.t3sbootstrap_configuration.styles.navbar.onTop = 0
+styles.content.loginform.pid = 0
+plugin.tx_cal_controller.view.list.listTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/list.tmpl
+plugin.tx_cal_controller.view.list.listWithTeaserTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/list_w_teaser.tmpl
+plugin.tx_cal_controller.view.day.dayTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/day.tmpl
+plugin.tx_cal_controller.view.week.weekTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/week.tmpl
+plugin.tx_cal_controller.view.year.yearTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/year.tmpl
+plugin.tx_cal_controller.view.dateFormat = %d.%m
+plugin.tx_cal_controller.view.timeFormat = %H:%M
 
 
 
