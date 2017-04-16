@@ -309,10 +309,11 @@ div.fsc-default.kirche div#gmap div.tx-wecmap-map div div.gm-style div._ibani_99
 	padding-top: 0.1em;
 }
 
+
+/* .tx-cal-controller .found, */
 .tx-cal-controller h1,
 .tx-cal-controller h2,
 .tx-cal-controller h3,
-.tx-cal-controller .found,
 .tx-cal-controller .pagebrowser {
 	text-align: center;
 }
@@ -336,5 +337,12 @@ div.fsc-default.kirche div#gmap div.tx-wecmap-map div div.gm-style div._ibani_99
 	padding-bottom: 0.1em !important;
 }
 
+.navbar-right {
+	margin-right: 0px;
+}
+
+.tx-cal-controller .month-large tr.days td {
+	padding-right: 4px;
+}
 
 
