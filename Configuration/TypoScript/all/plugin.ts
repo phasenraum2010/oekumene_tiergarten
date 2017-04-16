@@ -177,3 +177,7 @@ plugin.tx_cal_controller.view.week.dayViewLink.strftime = %a %d.%m.
 plugin.tx_cal_controller.view.week.timeFormatDay = %H:%M
 plugin.tx_cal_controller.view.day.timeFormatDay = %H:%M
 
+plugin.tx_directmail_pi1.siteUrl = http://oekumene-tiergarten-test.thomas-woehlke.de
+
+plugin.feadmin.dmailsubscription.setfixed.approve._FIELDLIST = uid,pid
+plugin.feadmin.dmailsubscription.setfixed.DELETE._FIELDLIST = uid,pid

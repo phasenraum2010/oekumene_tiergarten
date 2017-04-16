@@ -1,6 +1,5 @@
 config {
 	disableAllHeaderCode = 0
-	disableAllHeaderCode = 0
 	absRefPrefix = http://oekumene-tiergarten-test.thomas-woehlke.de/
 	baseURL = http://oekumene-tiergarten-test.thomas-woehlke.de/
 	compressCss = 0
@@ -9,9 +8,12 @@ config {
 	concatenateJs = 0
 	prefixLocalAnchors = all
 	absRelPath = /
-	tx_realurl_enable = 1
+	tx_realurl_enable = 0
 }
+page = PAGE
 page {
+	10 = FLUIDTEMPLATE
+	10.file = EXT:oekumene_tiergarten/Resources/Private/Templates/Mail.html
 	stylesheet >
 	headerData.10 >
 	headerData.10 = FILE
@@ -20,30 +22,8 @@ page {
 		wrap = <!-- | -->
 	}
 }
-plugin {
-	#tx_cssstyledcontent._CSS_DEFAULT_STYLE >
-	tx_ttaddress_pi1 >
-	feadmin.dmailsubscription {
-		pid = {$plugin.feadmin.dmailsubscription.pid}
-		templateFile ={$plugin.feadmin.dmailsubscription.file.templateFile}
-		cObjects {
-			CATLIST {
-				templateFile = {$plugin.feadmin.dmailsubscription.file.templateFile}
-				pid = {$plugin.feadmin.dmailsubscription.pid}
-			}
-		}
 
-		# Global wraps
-		wrap1.wrap = {$plugin.feadmin.dmailsubscription.wrap1}
-		wrap2.wrap = {$plugin.feadmin.dmailsubscription.wrap2}
-		color1.wrap = {$plugin.feadmin.dmailsubscription.color1}
-		color2.wrap = {$plugin.feadmin.dmailsubscription.color2}
-		color3.wrap = {$plugin.feadmin.dmailsubscription.color3}
-	}
-}
+plugin.tx_directmail_pi1.siteUrl = http://oekumene-tiergarten-test.thomas-woehlke.de
 
-
-
-
-
+lib.mail.content < styles.content.get
 
