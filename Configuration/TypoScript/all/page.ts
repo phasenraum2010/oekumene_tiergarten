@@ -5,13 +5,6 @@ page {
 		cssFileMyOwn = EXT:oekumene_tiergarten/Resources/Public/css/my.css
 	}
 	includeJSFooter {
-		/*
-		jsFileWecMapInfoBubble = EXT:wec_map/Resources/Public/JavaScript/ContribJS/infobubble.js
-		jsFileWecMapNarkerManager = EXT:wec_map/Resources/Public/JavaScript/ContribJS/markermanager.js
-		jsFileWecMapOms = EXT:wec_map/Resources/Public/JavaScript/ContribJS/oms.min.js
-		jsFileWecMapCopyrights = EXT:wec_map/Resources/Public/JavaScript/copyrights.js
-		jsFileWecMapWecMap = EXT:wec_map/Resources/Public/JavaScript/wecmap.js
-		*/
 		jsFileMapIcons = EXT:oekumene_tiergarten/Resources/Public/Contrib/map-icons/js/map-icons.min.js
 		jsFileMyOwn = EXT:oekumene_tiergarten/Resources/Public/js/my.js
 	}
