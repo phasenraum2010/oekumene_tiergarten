@@ -64,6 +64,10 @@
 				<target>Adresse</target>
 			</trans-unit>
 
+			<trans-unit id="tt_address.wikipedia">
+				<target>Wikipedia</target>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

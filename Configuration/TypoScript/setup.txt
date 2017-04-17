@@ -8,6 +8,21 @@ config {
 	spamProtectEmailAddresses_atSubst = (at)
 }
 
+config.tx_extbase {
+	persistence{
+		classes {
+			ThomasWoehlke\OekumeneTiergarten\Domain\Model\TtAddress {
+				mapping {
+					tableName = tt_address
+					columns {
+						wikipedia.mapOnProperty = wikipedia
+					}
+				}
+			}
+		}
+	}
+}
+
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/plugin.ts">
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/page.ts">

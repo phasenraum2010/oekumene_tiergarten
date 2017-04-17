@@ -6,3 +6,11 @@ CREATE TABLE tt_content (
 );
 
 
+#
+# Table structure for table 'tt_address'
+#
+CREATE TABLE tt_address (
+	wikipedia varchar(255) DEFAULT '',
+);
+
+

@@ -50,6 +50,10 @@
 					<dt><i class="tx-kirche-icon-facebook fa fa-facebook-official" aria-hidden="true"></i></dt>
 					<dd><f:link.external uri="https://www.facebook.com{data.ttAddress.facebook}" target="_blank">www.facebook.com{data.ttAddress.facebook}</f:link.external></dd>
 				</f:if>
+					<f:if condition="{data.ttAddress.wikipedia}">
+						<dt><i class="tx-kirche-icon-wikipedia fa fa-wikipedia-w" aria-hidden="true"></i></dt>
+						<dd><f:link.external uri="https://de.wikipedia.org/wiki/{data.ttAddress.wikipedia}" target="_blank">de.wikipedia.org/wiki/{data.ttAddress.wikipedia}</f:link.external></dd>
+					</f:if>
 				</dl>
 				<f:if condition="{data.bodytext}">
 					<div class="bodytext tx-kirche-info">

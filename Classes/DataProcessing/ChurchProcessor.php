@@ -11,8 +11,8 @@ namespace ThomasWoehlke\OekumeneTiergarten\DataProcessing;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 use JBartels\WecMap\MapService\Google\Map;
-use TYPO3\TtAddress\Domain\Repository\AddressRepository;
-use TYPO3\TtAddress\Domain\Model\Address;
+use ThomasWoehlke\OekumeneTiergarten\Domain\Repository\TtAddressRepository;
+use ThomasWoehlke\OekumeneTiergarten\Domain\Model\TtAddress;
 
 
 class ChurchProcessor implements DataProcessorInterface
@@ -42,9 +42,9 @@ class ChurchProcessor implements DataProcessorInterface
 
         /** @var $extbaseObjectManager \TYPO3\CMS\Extbase\Object\ObjectManager */
         $extbaseObjectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
-        /** @var $addressRepository \TYPO3\TtAddress\Domain\Repository\AddressRepository */
-        $addressRepository = $extbaseObjectManager->get('TYPO3\\TtAddress\\Domain\\Repository\\AddressRepository');
-        /** @var $ttAddress \TYPO3\TtAddress\Domain\Model\Address */
+        /** @var $addressRepository \ThomasWoehlke\OekumeneTiergarten\Domain\Repository\TtAddressRepository */
+        $addressRepository = $extbaseObjectManager->get('ThomasWoehlke\\OekumeneTiergarten\\Domain\\Repository\\TtAddressRepository');
+        /** @var $ttAddress \ThomasWoehlke\OekumeneTiergarten\Domain\Model\TtAddress */
         $ttAddress = $addressRepository->findByUid($ttAddressPageId);
 
         $myWWW = explode(" ",$ttAddress->getWww());
@@ -68,6 +68,7 @@ class ChurchProcessor implements DataProcessorInterface
             'skype' => $ttAddress->getSkype(),
             'twitter' => $ttAddress->getTwitter(),
             'facebook' => $ttAddress->getFacebook(),
+            'wikipedia' => $ttAddress->getWikipedia(),
             'linkedIn' => $ttAddress->getLinkedIn(),
             'email' => $ttAddress->getEmail(),
             'company' => $ttAddress->getCompany(),
@@ -77,7 +78,7 @@ class ChurchProcessor implements DataProcessorInterface
             'region' => $ttAddress->getRegion(),
             'country' => $ttAddress->getCountry(),
             //'image' => $ttAddress->getImage(),
-            'description' => $ttAddress->getDescription(),
+            'description' => $ttAddress->getDescription()
         ];
 
         $street = $ttAddress->getAddress();
