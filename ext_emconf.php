@@ -29,7 +29,6 @@ $EM_CONF[$_EXTKEY] = array(
             'fluid' => '7.6.0-7.6.99',
             'extbase' => '7.6.0-7.6.99',
             'scheduler' => '7.6.0-7.6.99',
-            /* 'felogin' => '7.6.0-7.6.99',*/
             'indexed_search' => '7.6.0-7.6.99',
             'fluid_styled_content' => '7.6.0-7.6.99',
             'rtehtmlarea' => '7.0.0-7.6.99',
