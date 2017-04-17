@@ -1,5 +1,23 @@
 plugin {
 	tx_oekumene_tiergarten {
+		view {
+			templateRootPaths {
+				10 = EXT:oekumene_tiergarten/Resources/Private/Templates/
+				20 = {$plugin.tx_oekumene_tiergarten.view.templateRootPath}
+			}
+			content.templateRootPaths {
+				10 = EXT:oekumene_tiergarten/Resources/Private/Templates/Content/
+				20 = {$plugin.tx_oekumene_tiergarten.view.content.templateRootPath}
+			}
+			partialRootPaths {
+				10 = EXT:oekumene_tiergarten/Resources/Private/Partials/
+				20 = {$plugin.tx_oekumene_tiergarten.view.partialRootPath}
+			}
+			layoutRootPaths {
+				10 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
+				20 = {$plugin.tx_oekumene_tiergarten.view.layoutRootPath}
+			}
+		}
 		settings {
 			ttAdressPageId = {$plugin.tx_oekumene_tiergarten.settings.ttAdressPageId}
 			feUserLoginDataPageId = {$plugin.tx_oekumene_tiergarten.settings.feUserLoginDataPageId}
@@ -86,6 +104,41 @@ plugin {
 			hint.learnMore = More info.
 			hint.dismiss = Got it
 			hint.message = This website uses cookies to ensure you get the best experience on our website.
+		}
+	}
+	tx_evangtermine {
+		view {
+			templateRootPaths {
+				20 = EXT:oekumene_tiergarten/Resources/Private/Extensions/evangtermine/Templates/
+			}
+			partialRootPaths {
+				20 = EXT:oekumene_tiergarten/Resources/Private/Extensions/evangtermine/Partials/
+			}
+			layoutRootPaths {
+				20 = EXT:oekumene_tiergarten/Resources/Private/Extensions/evangtermine/Layouts/
+			}
+		}
+		persistence {
+			storagePid = {$plugin.tx_oekumene_tiergarten.settings.txEvangterminePersistenceStoragePid}
+		}
+		settings {
+
+			# Default jQuery UI CSS
+			jQueryUICSS = EXT:evangtermine/Resources/Public/jquery-ui-1.11.4.custom/jquery-ui.min.css
+
+			# Default CSS
+			CSSFile = EXT:oekumene_tiergarten/Resources/Public/Contrib/evangtermine/default.css
+
+			# Default jQuery
+			jQuery = EXT:evangtermine/Resources/Public/jquery-1.11.1.min.js
+			#jQuery =
+
+			# Default jQuery UI
+			jQueryUI = EXT:evangtermine/Resources/Public/jquery-ui-1.11.4.custom/jquery-ui.min.js
+
+			# additional JavaScript
+			customJS = EXT:evangtermine/Resources/Public/evangtermine.js
+
 		}
 	}
 }

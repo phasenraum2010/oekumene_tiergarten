@@ -1,21 +1,3 @@
-# **************************************************
-# Add kirche to the "New Content Element Wizard"
-# **************************************************
-
-mod.wizards.newContentElement.wizardItems.common {
-	elements {
-		kirche {
-			iconIdentifier = content-image
-			title = LLL:EXT:oekumene_tiergarten/Resources/Private/Language/Tca.xlf:oekumene_tiergarten_kirche.wizard.title
-			description = LLL:EXT:oekumene_tiergarten/Resources/Private/Language/Tca.xlf:oekumene_tiergarten_kirche.wizard.description
-			tt_content_defValues {
-				CType = kirche
-			}
-		}
-	}
-	show := addToList(kirche)
-}
-
 RTE.default.contentCSS >
 RTE.default.contentCSS = typo3conf/ext/oekumene_tiergarten/Resources/Public/css/rte.css
 RTE.classes {
@@ -81,7 +63,6 @@ RTE.default.userElements.30 {
 RTE.default.proc.entryHTMLparser_db.tags.i.allowedAttribs := addToList(aria-hidden)
 RTE.default.proc.entryHTMLparser_db.tags.span.allowedAttribs := addToList(aria-hidden)
 RTE.default.proc.allowedClasses := addToList(tx-kirche-icon-email, tx-kirche-icon-standort, tx-kirche-icon-telefon, tx-kirche-icon-kalender, tx-kirche-icon-webseite, tx-kirche-icon-person, tx-kirche-icon-fax, map-icon, map-icon-postal-code, fa, fa-envelope, fa-phone, fa-calendar, fa-user-circle, fa-fax, glyphicon, glyphicon-link)
-#RTE.default.proc.allowTagsOutside := addToList(div)
 
 RTE.allowTags < RTE.default.proc.allowTags
 

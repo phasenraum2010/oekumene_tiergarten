@@ -46,6 +46,7 @@ page.config {
 
 # mmenu main/left config
 page.jsFooterInline.5.26.value (
+ /*  mmenu main/left config */
  if(winWidth < 768 && $menuLeft.length) {
  $('#menu-left').mmenu({
  'extensions': [
@@ -83,6 +84,7 @@ page.jsFooterInline.5.26.value (
 
 # mmenu right config
 page.jsFooterInline.5.27.value (
+ /*  mmenu right config */
  if(winWidth < 768 && $menuRight.length) {
  $('#lml')
  .after('<a id=\'rml\' href=\'#menu-right\'><i class=\'fa fa-chevron-circle-down fa-lg pull-right navbar-toggle\' aria-hidden=\'true\'></i></a>');
@@ -105,4 +107,16 @@ page.jsFooterInline.5.27.value (
   },
  });
  }
+)
+
+page.bodyTagCObject.wrap (
+<body | >
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.8&appId=742666935893488";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 )

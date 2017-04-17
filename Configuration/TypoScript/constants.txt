@@ -17,7 +17,7 @@ plugin {
 			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template root (FE)
 			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Templates/
 			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to templates for Content Elements (FE)
-			content.templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Templates/Content/
+			content.templateRootPath= EXT:oekumene_tiergarten/Resources/Private/Templates/Content/
 			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template partials (FE)
 			partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Partials/
 			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template layouts (FE)
@@ -42,6 +42,8 @@ plugin {
 			directMailFolderPageId = 31
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Newsletter Folder:
 			directMailSubscriptionPageId = 33
+			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id EKBO-Termine Data:
+			txEvangterminePersistenceStoragePid = 39
 			# cat=plugin.tx_oekumene_tiergarten/linke; type=string; label=Gogle Maos API Browser Key
 			googleMapsApiBrowserKey = AIzaSyCyH8ABZvQ3YYM2EjVfFaGx0xRbUj8E694
 		}
@@ -82,7 +84,7 @@ plugin {
 				excludeUidList = 4,3,18,17,24
 			}
 			navbar-right {
-				uidList = 4,3,18,17
+				uidList = 43,4,3,18,17
 				label = <i class="fa fa-bars" aria-hidden="true"></i>
 			}
 			sidebar-subMenu {
