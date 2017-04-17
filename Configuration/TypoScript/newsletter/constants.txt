@@ -1,8 +1,22 @@
 plugin {
 	tx_directmail_pi1 {
 		siteUrl = http://oekumene-tiergarten-test.thomas-woehlke.de
+		doubleLF = 1
+		flowedFormat = 1
 	}
 }
 
 stylesheet = EXT:oekumene_tiergarten/Resources/Public/css/direct_mail.css
+
+styles {
+	content {
+		loginform.pid = 0
+		shortcut.tables = tt_content,tt_address
+	}
+	templates {
+		templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Templates/
+		partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Partials/
+		layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Layouts/
+	}
+}
 

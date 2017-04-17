@@ -30,8 +30,13 @@ a.et_link:hover{}
 .et_filter_headline,
 .et_filter_subrow {
 	background: #317eac;
-	padding:2px;
+	padding: 2px 2px 2px 9px;
+	padding-left: 9px;
 }
+.et_filter_headline {
+	color: whitesmoke;
+}
+
 .et_filter_subrow {
 	text-align:center;
 }

@@ -1,0 +1,11 @@
+config {
+	baseURL = http://localhost/oekumene-tiergarten-test/
+	compressCss = 0
+	compressJs = 0
+	concatenateCss = 0
+	concatenateJs = 0
+}
+
+
+
+

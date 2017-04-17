@@ -11,8 +11,15 @@ animate.version = 3.5.2
 #	Plugin Constants
 #-------------------------------------------------------------------------------
 
+# {$plugin.tx_oekumene_tiergarten.settings.host}
+
 plugin {
 	tx_oekumene_tiergarten {
+		url {
+			local = http://localhost/oekumene-tiergarten-test/
+			test = http://oekumene-tiergarten-test.thomas-woehlke.de/
+			live = http://oekumene-tiergarten.de/
+		}
 		view {
 			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template root (FE)
 			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Templates/
@@ -24,6 +31,8 @@ plugin {
 			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Layouts/
 		}
 		settings {
+			# cat=plugin.tx_oekumene_tiergarten/linke; type=string; label=Host (URL of local,test,live)
+			host = {$plugin.tx_oekumene_tiergarten.url.test}
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id Adressen der Gemeinden:
 			ttAdressPageId = 36
 			# cat=plugin.tx_oekumene_tiergarten/links; type=int+; label=Page Id FE User:
@@ -76,6 +85,7 @@ plugin {
 		}
 		navigation {
 			navbar {
+				mmenu = 1
 				hover = 0
 				search {
 					enable = 1
@@ -84,7 +94,7 @@ plugin {
 				excludeUidList = 4,3,18,17,24
 			}
 			navbar-right {
-				uidList = 43,4,3,18,17
+				uidList = 4,3,18,17
 				label = <i class="fa fa-bars" aria-hidden="true"></i>
 			}
 			sidebar-subMenu {
@@ -108,9 +118,14 @@ plugin {
 		styles {
 			jumbotron {
 				bgImg.enable = 1
+				hidden.sm = 1
 			}
 			navbar {
-				style.inverse = 1
+				onTop = 1
+				style {
+					fixed.top = 1
+					inverse = 1
+				}
 			}
 		}
 	}
@@ -195,6 +210,19 @@ plugin {
 				id = 3
 			}
 		}
+		sitemap {
+			index {
+				allowNoStaticCachable = 1
+				allowNoCache = 1
+			}
+			enablePriority = 0
+		}
+		pageTitle {
+			applySitetitleToPrefixSuffix = 0
+			sitetitleGlueSpaceBefore = 1
+			sitetitlePosition = 1
+			sitetitleGlue = |
+		}
 	}
 	feadmin.dmailsubscription {
 		file.templateFile = EXT:oekumene_tiergarten/Resources/Private/Extensions/direct_mail_subscription/fe_admin_dmailsubscrip_de.html
@@ -212,12 +240,74 @@ plugin {
 			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/indexed_search/Layouts
 		}
 	}
+	tx_web2pdf {
+		settings {
+			pdfStyleSheet = print
+			pdfDestination = attachment
+		}
+	}
+	tx_cal_controller {
+		emailAddress = newsletter@oekumene-tiergarten.de
+		emailName = Thomas Woehlke
+		emailOrganisation = Der Ökumenische Arbeitskreis Tiergarten
+		pidList = 28
+		rights {
+			admin {
+				group = 1
+			}
+			defaultSavePid = 28
+		}
+		module {
+			locationloader.template = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/module_locationloader.tmpl
+			organizerloader.template = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/module_organizerloader.tmpl
+		}
+		view {
+			dateFormat = %d.%m.%Y
+			timeFormat = %H:%M
+			event {
+				meeting.statusViewPid = 25
+				eventModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/event_model.tmpl
+				eventTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/event.tmpl
+			}
+			location {
+				showMap = 1
+				locationModelTemplate4Address = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location_address_model.tmpl
+				locationModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location_model.tmpl
+				locationTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location.tmpl
+			}
+			month {
+				monthSmallTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_small.tmpl
+				monthLargeTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_large.tmpl
+				monthTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month.tmpl
+				monthMediumTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_medium.tmpl
+				monthMiniTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/monthMini.tmpl
+			}
+			organizer {
+				organizerModelTemplate4Address = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer_address_model.tmpl
+				organizerModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer_model.tmpl
+				organizerTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer.tmpl
+			}
+			list {
+				listTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/list.tmpl
+				listWithTeaserTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/list_w_teaser.tmpl
+			}
+			day.dayTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/day.tmpl
+			week.weekTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/week.tmpl
+			year.yearTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/year.tmpl
+			dateFormat = %d.%m
+			timeFormat = %H:%M
+		}
+	}
 }
 
+fl_realurl_image.conf_crop = 210
 
 # see plugin.t3sbootstrap_configuration.styles
 styles {
 	content {
+		loginform{
+			pid = 0
+		}
 		textmedia {
 			linkWrap {
 				lightboxEnabled = 1
@@ -233,67 +323,10 @@ styles {
 }
 
 
-plugin.tx_cal_controller.view.dateFormat = %d.%m.%Y
-plugin.tx_cal_controller.view.timeFormat = %H:%M
-plugin.tx_cal_controller.emailAddress = newsletter@oekumene-tiergarten.de
-plugin.tx_cal_controller.emailName = Thomas Woehlke
-plugin.tx_cal_controller.emailOrganisation = Der Ökumenische Arbeitskreis Tiergarten
-plugin.tx_cal_controller.view.event.meeting.statusViewPid = 25
-plugin.tx_cal_controller.view.location.showMap = 1
-plugin.tx_cal_controller.pidList = 28
 
 
-plugin.tx_femanager.settings.adminName = Thomas Woehlke | Web-Admin
-plugin.tx_femanager.settings.adminEmail = thomas.woehlke@oekumene-tiergarten.de
-plugin.tx_femanager.persistence.storagePid = 28
-plugin.tx_evangtermine.persistence.storagePid = 39
-plugin.tx_web2pdf.settings.pdfStyleSheet = print
-plugin.tx_web2pdf.settings.pdfDestination = attachment
-plugin.tx_pbsocial.persistence.storagePid = 22
-fl_realurl_image.conf_crop = 210
 
-plugin.tx_cal_controller.rights.admin.group = 1
-plugin.tx_cal_controller.rights.defaultSavePid = 28
-plugin.tx_cal_controller.view.event.eventModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/event_model.tmpl
-plugin.tx_cal_controller.view.event.eventTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/event.tmpl
-plugin.tx_cal_controller.view.location.locationModelTemplate4Address = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location_address_model.tmpl
-plugin.tx_cal_controller.view.location.locationModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location_model.tmpl
-plugin.tx_cal_controller.view.location.locationTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/location.tmpl
-plugin.tx_cal_controller.module.locationloader.template = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/module_locationloader.tmpl
-plugin.tx_cal_controller.module.organizerloader.template = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/module_organizerloader.tmpl
-plugin.tx_cal_controller.view.month.monthSmallTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_small.tmpl
-plugin.tx_cal_controller.view.month.monthLargeTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_large.tmpl
-plugin.tx_cal_controller.view.month.monthTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month.tmpl
-plugin.tx_cal_controller.view.month.monthMediumTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/month_medium.tmpl
-plugin.tx_cal_controller.view.month.monthMiniTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/monthMini.tmpl
-plugin.tx_cal_controller.view.organizer.organizerModelTemplate4Address = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer_address_model.tmpl
-plugin.tx_cal_controller.view.organizer.organizerModelTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer_model.tmpl
-plugin.tx_cal_controller.view.organizer.organizerTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/organizer.tmpl
-plugin.t3sbootstrap_configuration.styles.navbar.style.fixed.top = 0
-plugin.t3sbootstrap_configuration.styles.navbar.onTop = 0
-styles.content.loginform.pid = 0
-plugin.tx_cal_controller.view.list.listTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/list.tmpl
-plugin.tx_cal_controller.view.list.listWithTeaserTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/list_w_teaser.tmpl
-plugin.tx_cal_controller.view.day.dayTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/day.tmpl
-plugin.tx_cal_controller.view.week.weekTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/week.tmpl
-plugin.tx_cal_controller.view.year.yearTemplate = EXT:oekumene_tiergarten/Resources/Private/Extensions/cal/year.tmpl
-plugin.tx_cal_controller.view.dateFormat = %d.%m
-plugin.tx_cal_controller.view.timeFormat = %H:%M
 
-plugin.t3sbootstrap_configuration.styles.jumbotron.hidden.sm = 1
-plugin.metaseo.services.piwik.url = piwik.thomas-woehlke.de
-plugin.t3sbootstrap_configuration.navigation.navbar.mmenu = 1
-
-plugin.t3sbootstrap_configuration.styles.navbar.style.fixed.top = 1
-plugin.t3sbootstrap_configuration.styles.navbar.onTop = 1
-
-plugin.metaseo.sitemap.index.allowNoStaticCachable = 1
-plugin.metaseo.sitemap.index.allowNoCache = 1
-plugin.metaseo.sitemap.enablePriority = 0
-plugin.metaseo.pageTitle.applySitetitleToPrefixSuffix = 0
-plugin.metaseo.pageTitle.sitetitleGlueSpaceBefore = 1
-plugin.metaseo.pageTitle.sitetitlePosition = 1
-plugin.metaseo.pageTitle.sitetitleGlue = |
 
 
 
