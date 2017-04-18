@@ -1,5 +1,6 @@
 config {
 	baseURL = http://oekumene-tiergarten-test.thomas-woehlke.de/
+	absRefPrefix = http://oekumene-tiergarten-test.thomas-woehlke.de/
 	compressCss = 0
 	compressJs = 0
 	concatenateCss = 0
