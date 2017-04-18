@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 
 call_user_func(function () {
 
-    // Include new content elements to modWizards
+    // Include RTE Config
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
         '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TSConfig/Page/RTE.ts">'
     );
@@ -14,6 +14,10 @@ call_user_func(function () {
     // Include new content elements to modWizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
         '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TSConfig/ContentElementWizard.ts">'
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TSConfig/User/TSUserConfig.ts">'
     );
 
 });
