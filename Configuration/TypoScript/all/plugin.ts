@@ -236,9 +236,9 @@ plugin {
 				todo.dateFormat = %d.%m.%Y
 				event.dateFormat = %d.%m.%Y
 			}
+			backLink.value = <a href="javascript:history.back()"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>%%%BACK%%%</a>
+			lib.list.event.dateFormat = %d.%m.%Y
 		}
-		backLink.value = <a href="javascript:history.back()"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>%%%BACK%%%</a>
-		lib.list.event.dateFormat = %d.%m.%Y
 	}
 }
 
