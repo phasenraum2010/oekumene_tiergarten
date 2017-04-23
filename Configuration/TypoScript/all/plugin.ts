@@ -63,11 +63,32 @@ plugin {
 			facebookLocale = de_DE
 			googlePlusLocale = de
 			disqusLocale = de
-			list.media.dummyImage = typo3conf/ext/oekumene_tiergarten/Resources/Public/Images/logo_oekumene.jpg
+			includeSubCategories = 1
+			categoryConjunction = 1
+			startingpoint = 22
+			recursive = 4
+			detailPid = 6
+			listPid = 5
+			backPid = 5
+			detailPidDetermination = default
+			cropMaxCharacters = 200
+			overrideFlexformSettingsIfEmpty = backPid,listPid,startingpoint,recursive,list.paginate.itemsPerPage,cropMaxCharacters
+			enablePreviewOfHiddenRecords = 1
+			list {
+				media.dummyImage = typo3conf/ext/oekumene_tiergarten/Resources/Public/Images/logo_oekumene.jpg
+				paginate {
+					itemsPerPage = 5
+					insertAbove = 1
+					insertBelow = 1
+					prevNextHeaderTags = 1
+					maximumNumberOfLinks = 3
+				}
+			}
+			detail {
+				errorHandling = 30,404
+				showPrevNext = 1
+			}
 		}
-	}
-	tx_directmail_pi1 {
-		siteUrl = http://oekumene-tiergarten-test.thomas-woehlke.de
 	}
 	feadmin.dmailsubscription {
 		templateFile ={$plugin.feadmin.dmailsubscription.file.templateFile}

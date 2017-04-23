@@ -7,6 +7,12 @@ config {
 	concatenateJs = 0
 }
 
+plugin {
+	tx_directmail_pi1 {
+		siteUrl = http://localhost/oekumene-tiergarten-test/
+	}
+}
+
 
 
 

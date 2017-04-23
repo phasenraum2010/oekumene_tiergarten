@@ -12,7 +12,7 @@ $EM_CONF[$_EXTKEY] = array(
     'title' => 'Oekumene Tiergarten',
     'description' => 'Site Packge for www.oekumene-tiergarten.de',
     'category' => 'templates',
-    'version' => '0.0.15',
+    'version' => '0.0.17',
     'state' => 'stable',
     'uploadfolder' => true,
     'createDirs' => 'uploads/tx_oekumene-tiergarten',
@@ -41,8 +41,8 @@ $EM_CONF[$_EXTKEY] = array(
             'tt_address' => '3.2.1-3.2.99',
             'cal' => '1.10.3-1.11.99',
             'powermail' => '3.14.0-3.99.99',
-            'rx_shariff' => '7.0.0-7.99.99',
-            'news' => '5.3.2-5.3.99',
+            'rx_shariff' => '7.0.0-10.99.99',
+            'news' => '5.3.2-6.0.99',
             'jumpurl' => '7.6.0-8.9.99',
             'direct_mail' => '5.1.1-5.99.99',
             'direct_mail_subscription' => '2.0.4-2.99.99',
@@ -57,7 +57,10 @@ $EM_CONF[$_EXTKEY] = array(
             'cooluri' => '0.0.0-99.99.99',
             'simulatestatic' => '0.0.0-99.99.99',
         ),
-        'suggests' => array(),
+        'suggests' => array(
+            /* wegen news */
+            'dd_googlesitemap' => '2.0.5-2.99.99',
+        ),
     ),
     'autoload' => array(
         'psr-4' => array(
