@@ -1,0 +1,14 @@
+config {
+	baseURL = http://oekumene-tiergarten.thomas-woehlke.de/
+	absRefPrefix = http://oekumene-tiergarten.thomas-woehlke.de/
+	compressCss = 1
+	compressJs = 1
+	concatenateCss = 1
+	concatenateJs = 1
+}
+
+plugin {
+	tx_directmail_pi1 {
+		siteUrl = http://oekumene-tiergarten.thomas-woehlke.de
+	}
+}

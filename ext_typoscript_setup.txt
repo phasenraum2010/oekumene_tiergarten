@@ -1,0 +1,17 @@
+# ==============================================
+# Persistence object mapping configuration
+# ==============================================
+config.tx_extbase {
+	persistence{
+		classes {
+			ThomasWoehlke\OekumeneTiergarten\Domain\Model\TtAddress {
+				mapping {
+					tableName = tt_address
+					columns {
+						wikipedia.mapOnProperty = wikipedia
+					}
+				}
+			}
+		}
+	}
+}

@@ -18,6 +18,9 @@ call_user_func(
             'Oekumene Tiergarten Newsletter'
         );
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/rssfeed',
+            'Oekumene Tiergarten Blog RSS Feed'
+        );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/host/local',
             'Oekumene Tiergarten Localhost'
@@ -25,6 +28,10 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/host/test',
             'Oekumene Tiergarten Test'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/host/stage',
+            'Oekumene Tiergarten Stage'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/host/live',
