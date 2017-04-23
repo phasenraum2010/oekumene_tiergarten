@@ -115,7 +115,7 @@ plugin {
 				formPid = 19
 			}
 			login {
-				enable = 1
+				enable = 0
 				uid = 44
 			}
 			lightbox {
