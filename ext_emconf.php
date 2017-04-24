@@ -23,7 +23,7 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '7.6.0-7.6.99',
-            'php' => '5.4.0-7.0.999',
+            'php' => '7.0.0-7.0.999',
             /* System-Extensions: */
             'info' => '7.6.0-7.6.99',
             'fluid' => '7.6.0-7.6.99',
