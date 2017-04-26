@@ -26,14 +26,12 @@ call_user_func(function () {
         '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TSConfig/User/TSUserConfig.ts">'
     );
 
+    unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['news']);
+
     // Register the RealUrl Autoconfig Hook
     if (! isset ($confArr ['enableRealURLAutoConfiguration']) || $confArr ['enableRealURLAutoConfiguration']) {
         $GLOBALS ['TYPO3_CONF_VARS'] ['SC_OPTIONS'] ['ext/realurl/class.tx_realurl_autoconfgen.php'] ['extensionConfiguration'] ['oekumene_tiergarten'] = 'ThomasWoehlke\\OekumeneTiergarten\\Hooks\\RealUrl->addRealURLConfig';
     }
-
-    /*
-    unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['news']);
-    */
 
 });
 

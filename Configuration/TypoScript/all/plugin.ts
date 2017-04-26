@@ -87,6 +87,7 @@ plugin {
 			detail {
 				errorHandling = 30,404
 				showPrevNext = 1
+				disqusShortname = oekumene-tiergarten
 			}
 			link {
 				hrDate = 1
@@ -96,6 +97,9 @@ plugin {
 					year = Y
 				}
 			}
+			facebookLocale = de_DE
+			disqusLocale = de_DE
+			googlePlusLocale = de_DE
 		}
 	}
 	feadmin.dmailsubscription {
