@@ -31,6 +31,10 @@ call_user_func(function () {
         $GLOBALS ['TYPO3_CONF_VARS'] ['SC_OPTIONS'] ['ext/realurl/class.tx_realurl_autoconfgen.php'] ['extensionConfiguration'] ['oekumene_tiergarten'] = 'ThomasWoehlke\\OekumeneTiergarten\\Hooks\\RealUrl->addRealURLConfig';
     }
 
+    /*
+    unset($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['news']);
+    */
+
 });
 
 

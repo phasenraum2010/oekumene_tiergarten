@@ -88,6 +88,14 @@ plugin {
 				errorHandling = 30,404
 				showPrevNext = 1
 			}
+			link {
+				hrDate = 1
+				hrDate {
+					day = d
+					month = m
+					year = Y
+				}
+			}
 		}
 	}
 	feadmin.dmailsubscription {
