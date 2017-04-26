@@ -18,8 +18,12 @@ call_user_func(
             'Oekumene Tiergarten Newsletter'
         );
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/rssfeed',
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/blog/rssfeed',
             'Oekumene Tiergarten Blog RSS Feed'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/blog/ical',
+            'Oekumene Tiergarten Blog iCal'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('oekumene_tiergarten', 'Configuration/TypoScript/host/local',

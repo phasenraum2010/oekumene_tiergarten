@@ -70,12 +70,12 @@ class RealUrl
             'index' => array(
                 'feed.rss' => array(
                     'keyValues' => array(
-                        'type' => 9818, // pageType of your RSS feed page
+                        'type' => 9818,
                     ),
                 ),
-                'feed.rss' => array(
+                'calendar.ical' => array(
                     'keyValues' => array(
-                        'type' => 9818,
+                        'type' => 9819,
                     )
                 ),
                 'sitemap.xml' => array(

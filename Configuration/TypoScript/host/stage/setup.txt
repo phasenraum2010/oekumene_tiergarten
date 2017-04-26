@@ -11,4 +11,18 @@ plugin {
 	tx_directmail_pi1 {
 		siteUrl = http://oekumene-tiergarten.thomas-woehlke.de
 	}
+	tx_news {
+		rss.channel {
+			link =  http://oekumene-tiergarten.thomas-woehlke.de/feed.rss
+		}
+	}
 }
+
+
+
+[globalVar = TSFE:type = 9818]
+	config {
+		baseURL = http://oekumene-tiergarten.thomas-woehlke.de/
+		absRefPrefix = http://oekumene-tiergarten.thomas-woehlke.de/
+	}
+[global]

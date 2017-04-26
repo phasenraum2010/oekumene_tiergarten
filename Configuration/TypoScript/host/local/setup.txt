@@ -11,8 +11,18 @@ plugin {
 	tx_directmail_pi1 {
 		siteUrl = http://localhost/oekumene-tiergarten-test/
 	}
+	tx_news {
+		rss.channel {
+			link =  http://localhost/oekumene-tiergarten-test/feed.rss
+		}
+	}
 }
 
 
-
+[globalVar = TSFE:type = 9818]
+	config {
+		baseURL = http://localhost/oekumene-tiergarten-test/
+		absRefPrefix = http://localhost/oekumene-tiergarten-test/
+	}
+[global]
 
