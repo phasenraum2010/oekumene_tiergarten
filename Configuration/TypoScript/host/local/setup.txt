@@ -24,5 +24,14 @@ plugin {
 		baseURL = http://localhost/oekumene-tiergarten-test/
 		absRefPrefix = http://localhost/oekumene-tiergarten-test/
 	}
+	plugin.tx_news.settings.useStdWrap = http://localhost/oekumene-tiergarten-test/feed.rss
+[global]
+
+[globalVar = TSFE:type = 9819]
+	config {
+		baseURL = http://localhost/oekumene-tiergarten-test/
+		absRefPrefix = http://localhost/oekumene-tiergarten-test/
+	}
+	plugin.tx_news.settings.useStdWrap = http://localhost/oekumene-tiergarten-test/feed.rss
 [global]
 

@@ -23,8 +23,16 @@ plugin {
 		baseURL = http://oekumene-tiergarten.de/
 		absRefPrefix = http://oekumene-tiergarten.de/
 	}
+	plugin.tx_news.settings.useStdWrap = http://oekumene-tiergarten.de/feed.rss
 [global]
 
+[globalVar = TSFE:type = 9819]
+	config {
+		baseURL = http://oekumene-tiergarten.de/
+		absRefPrefix = http://oekumene-tiergarten.de/
+	}
+	plugin.tx_news.settings.useStdWrap = http://oekumene-tiergarten.de/feed.rss
+[global]
 
 
 

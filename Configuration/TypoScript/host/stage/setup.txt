@@ -25,4 +25,13 @@ plugin {
 		baseURL = http://oekumene-tiergarten.thomas-woehlke.de/
 		absRefPrefix = http://oekumene-tiergarten.thomas-woehlke.de/
 	}
+	plugin.tx_news.settings.useStdWrap = http://oekumene-tiergarten.thomas-woehlke.de/feed.rss
+[global]
+
+[globalVar = TSFE:type = 9819]
+	config {
+		baseURL = http://oekumene-tiergarten.thomas-woehlke.de/
+		absRefPrefix = http://oekumene-tiergarten.thomas-woehlke.de/
+	}
+	plugin.tx_news.settings.useStdWrap = http://oekumene-tiergarten.thomas-woehlke.de/feed.rss
 [global]

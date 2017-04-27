@@ -25,7 +25,17 @@ plugin {
 		baseURL = http://oekumene-tiergarten-test.thomas-woehlke.de/
 		absRefPrefix = http://oekumene-tiergarten-test.thomas-woehlke.de/
 	}
+	plugin.tx_news.settings.useStdWrap = http://oekumene-tiergarten-test.thomas-woehlke.de/feed.rss
 [global]
+
+[globalVar = TSFE:type = 9819]
+	config {
+		baseURL = http://oekumene-tiergarten-test.thomas-woehlke.de/
+		absRefPrefix = http://oekumene-tiergarten-test.thomas-woehlke.de/
+	}
+	plugin.tx_news.settings.useStdWrap = http://oekumene-tiergarten-test.thomas-woehlke.de/feed.rss
+[global]
+
 
 
 

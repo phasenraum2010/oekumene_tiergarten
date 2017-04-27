@@ -52,44 +52,5 @@ plugin.tx_news {
 tt_content.stdWrap >
 tt_content.stdWrap.editPanel = 0
 
-
-[globalVar = TSFE:type = 9819]
-	lib.stdheader >
-	tt_content.stdWrap.innerWrap >
-	tt_content.stdWrap.wrap >
-	# get away <div class="feEditAdvanced-firstWrapper" ...> if your logged into the backend
-	styles.content.get.stdWrap >
-
-	pageNewsICalendar = PAGE
-	pageNewsICalendar.typeNum = 9819
-	pageNewsICalendar.10 < styles.content.get
-	pageNewsICalendar.10.select.where = colPos=0 AND list_type = "news_pi1"
-	pageNewsICalendar.10.select {
-		orderBy = sorting ASC
-		max = 1
-	}
-
-	config {
-		# deactivate Standard-Header
-		disableAllHeaderCode = 1
-		# no xhtml tags
-		xhtml_cleaning = none
-		admPanel = 0
-		metaCharset = utf-8
-		# you need an english locale to get correct rfc values for <lastBuildDate>, ...
-		locale_all = en_EN
-		# define charset
-		additionalHeaders = Content-Type:text/calendar;charset=utf-8
-		disablePrefixComment = 1
-	}
-
-	# set the format
-	plugin.tx_news.settings.format = ical
-	# set the domain for real unique uids
-	plugin.tx_news.settings.domain.data = getEnv:HTTP_HOST
-	plugin.tx_news.settings.useStdWrap = domain
-
-	# delete content wrap
-	tt_content.stdWrap >
-[global]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/blog/rssfeed/rssfeed.ts">
 
