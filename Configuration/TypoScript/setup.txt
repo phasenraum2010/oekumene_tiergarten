@@ -10,9 +10,15 @@
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/all/tt_content.ts">
 
+/*
+[globalVar = TSFE:type = 9819]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/blog/ical/ical.ts">
+[global]
 
+[globalVar = TSFE:type = 9818]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:oekumene_tiergarten/Configuration/TypoScript/blog/rssfeed/rssfeed.ts">
+[global]
+*/
 
 
 

@@ -1,0 +1,27 @@
+plugin {
+	tx_news {
+		view {
+			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Templates
+			partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Partials/
+			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Layouts/
+			twb {
+				templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Templates
+				partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Partials/
+				layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Extensions/news/Layouts/
+			}
+		}
+	}
+	tx_oekumene_tiergarten {
+		view {
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template root (FE)
+			templateRootPath = EXT:oekumene_tiergarten/Resources/Private/Templates/
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to templates for Content Elements (FE)
+			content.templateRootPath= EXT:oekumene_tiergarten/Resources/Private/Templates/Content/
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template partials (FE)
+			partialRootPath = EXT:oekumene_tiergarten/Resources/Private/Partials/
+			# cat=plugin.tx_oekumene_tiergarten/file; type=string; label=Path to template layouts (FE)
+			layoutRootPath = EXT:oekumene_tiergarten/Resources/Private/Layouts/
+		}
+	}
+}
+
