@@ -8,7 +8,7 @@ lib.fluidContent {
 		300 = EXT:oekumene_tiergarten/Resources/Private/Partials/
 	}
 	layoutRootPaths {
-		310 = {$plugin.tx_oekumene_tiergarten.view.content.layoutRootPath}
+		310 = {$plugin.tx_oekumene_tiergarten.view.layoutRootPath}
 		300 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
 	}
 }
@@ -32,16 +32,8 @@ lib.content.main {
 		select.orderBy = sorting ASC
 		select.where = colPos=0  AND list_type = "news_pi1"
 		select.max = 1
-		stdWrap.innerWrap >
-		stdWrap.wrap >
-		stdWrap >
 	}
 }
-lib.content.main.stdWrap >
-lib.content.main.stdWrap.wrap >
-lib.content.main.stdWrap.innerWrap >
-lib.content.main.stdWrap.editPanel >
-
 
 pageNewsRSS = PAGE
 pageNewsRSS.10 < lib.content.main
@@ -84,7 +76,7 @@ plugin.tx_news {
 			300 = EXT:oekumene_tiergarten/Resources/Private/Partials/
 		}
 		layoutRootPaths {
-			310 = {$plugin.tx_oekumene_tiergarten.view.content.layoutRootPath}
+			310 = {$plugin.tx_oekumene_tiergarten.view.layoutRootPath}
 			300 = EXT:oekumene_tiergarten/Resources/Private/Layouts/
 		}
 	}
@@ -145,4 +137,7 @@ plugin.tx_news {
 }
 
 # delete content wrap
-tt_content.stdWrap >
+tt_content.list.20.stdWrap.editIcons.iconTitle.data >
+tt_content.list.20.stdWrap.editIcons.iconTitle >
+tt_content.list.20.stdWrap.editIcons >
+tt_content.list.20.stdWrap >
