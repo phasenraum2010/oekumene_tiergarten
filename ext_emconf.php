@@ -35,7 +35,7 @@ $EM_CONF[$_EXTKEY] = array(
             'form' => '7.0.0-8.9.99',
             /* TER-Extensions: */
             'gridelements' => '7.0.0-8.9.99',
-            'realurl' => '2.1.9-2.1.99',
+            'realurl' => '2.2.1-2.2.99',
             'crawler' => '5.1.2-5.1.99',
             'wec_map' => '3.3.0-3.5.99',
             'tt_address' => '3.2.1-3.2.99',
