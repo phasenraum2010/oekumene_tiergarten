@@ -85,3 +85,25 @@ TCEFORM.tt_content.bodytext.RTEfullScreenWidth = 100%
 options.clearCache.clearRTECache = 1
 
 
+
+# add the microdata and “edit element” button to RTE
+RTE.default.showButtons := addToList(showmicrodata,editelement)
+
+RTE.default {
+	schema {
+		sources {
+			schemaOrg = EXT:rtehtmlarea/extensions/MicrodataSchema/res/schemaOrgAll.rdf
+		}
+	}
+
+	proc {
+		keepPDIVattribs := addToList(itemscope, itemtype, itemprop)
+		entryHTMLparser_db {
+			tags {
+				span.allowedAttribs := addToList(itemscope, itemtype, itemprop)
+			}
+		}
+	}
+}
+
+
