@@ -35,7 +35,7 @@ $EM_CONF[$_EXTKEY] = array(
             'form' => '7.0.0-8.9.99',
             /* TER-Extensions: */
             'gridelements' => '7.0.0-8.9.99',
-            'realurl' => '2.2.1-2.2.99',
+            //'realurl' => '2.2.1-2.2.99',
             'crawler' => '5.1.2-5.1.99',
             'wec_map' => '3.3.0-3.5.99',
             'tt_address' => '3.2.1-3.2.99',
@@ -53,7 +53,7 @@ $EM_CONF[$_EXTKEY] = array(
             'evangtermine' => '2.0.6-2.0.99',
             'fl_realurl_image' => '4.1.4-4.1.99',
             'mindshape_cookie_hint' => '1.0.9-1.0.99',
-            'typo3_console' => '4.5.3-4.5.99',
+            'typo3_console' => '4.5.3-4.6.99',
             'devtools' => '0.2.4-0.2.99',
             'web2pdf' => '1.1.5-1.1.99',
         ),

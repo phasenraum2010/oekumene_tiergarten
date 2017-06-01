@@ -8,6 +8,8 @@
 
 namespace ThomasWoehlke\OekumeneTiergarten\Hooks;
 
+// $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['_DEFAULT'] = array(
+
 class RealUrl
 {
 
