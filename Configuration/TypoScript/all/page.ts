@@ -110,7 +110,7 @@ page.jsFooterInline.5.27.value (
 )
 
 page.bodyTagCObject.wrap (
-<body | >
+<body | itemscope="" itemtype="http://schema.org/WebPage">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -120,3 +120,20 @@ page.bodyTagCObject.wrap (
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 )
+
+page {
+	# Add some classes to the bodytag
+	bodyTagCObject {
+		60 = TEXT
+		60 {
+			noTrimWrap = | itemid="|" |
+			data = getIndpEnv:TYPO3_REQUEST_URL
+		}
+	}
+}
+
+
+[globalVar = LIT:2 = {$plugin.t3sbootstrap_configuration.general.onePage.variant}]
+	page.bodyTagCObject.30.10 >
+	page.bodyTagCObject.50.value = data-spy="scroll" data-target=".navbar.onepage"
+[global]
